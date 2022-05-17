@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - appendChild()">
+    <title>DOM - appendChild()</title>
+</head>
+<body>
+    
+
+    <ul id="first-list">
+        <li>English</li>
+        <li>Chemistry</li>
+        <li>Maths</li>
+    </ul>
+    <ul id="second-list">
+        <li>Computer</li>
+        <li>Commerce</li>
+        <li>History</li>
+
+    </ul>
+    <script>
+        // Syntax
+        // parentNode.appendChild(childNode)
+
+        // 1. Simple appendChild()
+        // function createMenuItem(item){
+        //     let liEle = document.createElement('li');
+        //     liEle.textContent = item;
+        //     return liEle;
+        // }
+        // let menu = document.querySelector('#menu');
+        //  menu.appendChild(createMenuItem('Home'));
+        //  menu.appendChild(createMenuItem('Services'));
+        //  menu.appendChild(createMenuItem('Project'));
+        //  menu.appendChild(createMenuItem('Contact'));
+
+        //  2. moving node within a document
+        let firstList = document.querySelector('#first- list');
+        let english = firstList.firstElementChild;
+
+        let secondList = document.querySelector('#second-list');
+        secondList.appendChild(english);
+
+
+    </script>
+</body>
+</html>

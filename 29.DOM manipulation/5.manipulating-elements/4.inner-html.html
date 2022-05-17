@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - innerHTML">
+    <title>DOM - innerHTML</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Services</li>
+    </ul>
+    <script>
+        // innerHTML
+        // innerHTML is the property of the element that allows us to get or set mark up contained 
+
+        // Reading the iinerHTML property of an element
+        // syntax: let content = element.innerHTML
+        
+        // 1. Example
+        // let menu = document.querySelector('#menu');
+        // console.log(menu.innerHTML); 
+
+        // 2. Example
+        let menu = document.querySelector('#menu');
+        let li = document.createElement('li');
+        li.textContent = 'Contact Us';
+        menu.appendChild(li);
+        console.log(menu.innerHTML);
+
+ 
+        
+
+    </script>
+</body>
+</html>

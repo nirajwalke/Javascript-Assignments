@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - InnerHTML vs createElement()">
+    <title>DOM - InnerHTML vs createElement()</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        // 1. createElement is more performant
+        // createElement()
+        // let div = document.querySelector('.container');
+        // let p = document.createElement('p');
+        // p.textContent = 'JavaScript DOM';
+        // div.appendChild(p);
+
+        // innerHTML - causes the web browsers to reparse and recreate all DOM nodes inside the div element
+        let div = document.querySelector('.container');
+        div.innerHTML = '<p class = "note">Javascript - DOM</p>'
+
+        // 2. createElement is more secure
+        // 3. using DocumentFragment for composing DOM nodes
+        // create new 'p' element in each iteraion,recalculation of styles,painting and layout every iteration
+        let div = document.querySelector('container');
+        for( let i = 0; i < 25; i++){
+            let p = document.createElement('p');
+            p.textContent =`Paragraph : ${i}`;
+            div.appendChild(p);
+        };
+
+        let div = document.querySelector('container');
+        let fragment = document.createDocumentFragment(); 
+        for( let i = 0; i < 25; i++){
+            let p = document.createElement('p');
+            p.textContent =`Paragraph : ${i}`;
+            fragment.appendChild(p);
+        };
+        div.appendChild(fragment);
+
+    </script>
+
+</body>
+</html>

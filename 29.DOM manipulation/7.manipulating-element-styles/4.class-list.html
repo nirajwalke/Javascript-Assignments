@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - classList">
+    <title>DOM - classList</title>
+</head>
+<div id="content" class="main red visible">DOM - classList</div>
+<body>
+    <script>
+        // DOM - classList
+        // Syntax:
+        // let classes = element.classList ; // retun - DOMTokenList object
+        // classList - read only
+
+        // 1. Get the CSS classes of an element
+        // let content = document.querySelector('#content');
+        // console.log(content.classList);
+        // for(const cssClass of content.classList){
+            // console.log(cssClass);
+        // };
+
+        // 2. Add one or more classes to the class list of an element
+        // add()
+        // element.classList.add()
+        // let content = document.querySelector('#content');
+        // content.classList.add('info', 'visible');
+        // console.log(content.classList);
+
+        // 3. remove the element's class
+        // remove()
+        // content.classList.remove('info','red');
+
+        // 4. replace a class of an element
+        // replace()
+        // content.classList.replace('red', 'green');
+
+        // 5. check if an element has a specified class
+        // contains() - return true/false
+        // let content = document.querySelector('#content');
+        // console.log(content.classList.contains('main'));
+        // console.log(content.classList.contains('green'));
+
+        // 6. Toggle a class
+        // toggle()
+        // if the classList of an element contain specified class name, toggle() removes it .
+        // if the classList does not contain the class name, the toggle() adds the specified class to the class list
+        let content = document.querySelector('#content');
+        content.classList.toggle('visible'); 
+
+    </script>
+</body>
+</html>

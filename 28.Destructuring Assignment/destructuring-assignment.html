@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Descriptiion" content="Javascript - Destructuring-Assignment">
+    <title>Javascript - Destructuring-Assignment</title>
+</head>
+<body>
+    <script>
+        // Destructuring Assignment
+        // Objects and Arrays
+
+        // Destructuring assignment is a special syntax that allows to 'unpack' arrays or objects
+        // into a bunch of variables
+
+        // Array Destructuring
+        // let fruits =[ 'Apple', 'Orange', 'Banana' ];
+        // console.log(fruits[0]);
+        // console.log(fruits[1]);
+        // console.log(fruits[2]);
+
+        //Array Destructuring
+        // Syntax
+        // let [ var-1, var-2, ..., var-N] = nameOfArray
+        // let fruits =[ 'Apple', 'Orange', 'Banana' ];
+        // let [ fruitOne, fruitTwo, fruitThree ] = fruits; // [ 'Apple', 'Orange', 'Banana' ]
+        // console.log(fruitOne); // fruits[0] // Apple
+        // console.log(fruitTwo); // fruits[1] // Orange
+        // console.log(fruitThree); // fruits[2] // Banana
+
+        // let user = [ 'Skillsafari', 'Edukeys', 'John' ];
+        // let [ firstName, ,lastName ] = [ 'Skillsafari', 'Edukeys', 'John' ];
+        // console.log(firstName); // Skillsafari
+        // console.log(lastName);  // John
+
+
+        // Assign to anything at the left side
+        // let user = {};
+        // [ user.firstName, user.lastName ] = "Skillsafari Edukeys".split(' ') // ['Skillsafari', 'Edukeys']
+        // console.log(user); // {firstName: 'Skillsafari', lastName: 'Edukeys'}
+
+        // Looping with .entries()
+        // for ( let [ key, value ] of Object.entries(user)){ // {'firstName', 'Skillsafari'}
+        //       //  let [ key, value ] = {'firstName', 'Skillsafari'}
+        //       console.log(`${key}:${value}`); // firstName:Skillsafari
+        //                                       // lastName:Edukeys
+        // };
+
+        // let user = new Map([
+        //     [ 'firstName', 'Skillsafari'],
+        //     [ 'lastName', 'Edukeys'],
+        // ]);
+        // for ( let [ key, value ] of user ) {
+        //     console.log(`${key} : ${value}`); // firstName : Skillsafari
+        //                                       // lastName : Edukeys
+        // };
+
+        // Swap variables trick
+        // let guest = 'John';
+        // let admin = 'Jack';
+        // [ guest, admin ] = [ admin, guest ]; // [ 'Jack', 'John']
+        // console.log(`${guest} ${admin}`); // Jack John
+
+        // rest...
+        // let [ firstName, lastName ] = [ 'jack', 'john', 'Mary'];
+        // console.log(firstName); // jack
+        // console.log(lastName); // John
+
+        // Introduce a new variable preceeded by '...' Ex: ...names. Takes est of the array entries as an array
+        // firstName = 'Jack'
+        // lastName = 'John'
+        // ...names = [ 'Mary', Skillsafari, 'Edukeys' ] // names[0], names[1], names[2]
+        // console.log(names); // [ 'Mary', Skillsafari, 'Edukeys' ]
+        // console.log(names[0]);
+        // console.log(names[1]);
+        // console.log(names[2]);
+
+        // Default values
+        // let [ firstName, lastName ] = [];
+        // console.log(firstName);
+        // console.log(lastName);
+        
+        // let [ firstName = 'Skillsafari', lastName = 'Edukeys' ] = [];
+        // console.log(firstName); // Skillsafari
+        // console.log(lastName);  // Edukeys
+
+        
+        // let [ firstName = 'Skillsafari', lastName = 'Edukeys' ] = [ 'John', 'Jack' ];
+        // console.log(firstName); // John
+        // console.log(lastName);  // Jack
+
+        // prompt
+        // let [ name = prompt('name?'), surname = prompt('surname?') ] = [ 'John' ];
+        // console.log(name);
+        // console.log(surname);
+
+        // Object Destructuring
+        // let user = {
+        //     name: 'John',
+        //     age: 30,
+        //     isAdmin: true,
+        // };
+        // Syntax
+        // let { var-1, var-2, ..., var-N } = { var-1:..., var:..., ..., var-N:...}
+        // let { name, age, isAdmin } = user;
+        // console.log( user.name );
+        // console.log( user.age );
+        // console.log( user.isAdmin );
+        // let { name, age, isAdmin } = user;
+        //  console.log( name ); // John
+        // console.log( age ); //30
+        // console.log( isAdmin ); // true
+
+        // change the order of variable
+        // let { name, age, isAdmin } = user;
+        //  console.log( name ); // John
+        // console.log( age ); //30
+        // console.log( isAdmin ); // true
+         
+        // short - hand property (:)
+        // syntax
+        // varName : short-hand property name
+        // sourceProperty : targetVariable
+        // name : n or firstName
+        
+
+        // Default values
+        // let options = {
+        //     title : 'Menu'
+        // };
+        // let { width = 100, height = 200, title } = options;
+        // console.log(title); // Menu
+        // console.log(options); // {title: 'Menu'}
+        // console.log(width); // 100
+        // console.log(height); // 200
+
+        // prompt
+        // let options = {
+        //     title : 'Menu'
+        // };
+        // let { width : w = prompt('width?'), height = 200, title } = options;
+        // console.log(title); // Menu
+        // console.log(options); // {title: 'Menu'}
+        // console.log(+w); // 500
+        // console.log(height); // 200
+
+        // let options = {
+        //     title: 'Menu',
+        //     width: 100,
+        //     height: 200,
+        // };
+        // let { width } = options;
+        // console.log(width); // 100
+
+        // rest... 
+        let options = {
+            title: 'Menu',
+            width: 100,
+            height: 200,
+        };
+        let { title, ...values } = options;
+        // title = 'Menu'
+        // ...values = { width: 100, height: 200} // values.width, values.height
+        console.log(title); // Menu
+        console.log(values); // {width: 100, height: 200}
+        console.log(values.width); //100
+        console.log(values.height); // 200
+
+
+        // parentheses - ()
+        let firstName, lastName, age;
+        // ({firstName, lastName, age } = {firstName:'John', lastName:'Jack', age:30 } ) ;
+        ({firstName, lastName, age } = {firstName:'John', lastName:'Jack', age:30 } ) ;
+        console.log(firstName); // John
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

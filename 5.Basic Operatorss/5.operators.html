@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript-Operators">
+    <title>Javascript-Operators</title>
+</head>
+<body>
+    <script>
+        // Basic Operators
+        // Terms:Urinary,Binary,Operand and Operator
+        // Ex.
+        // let a = 10, b = 20;
+        // console.log(a + b); // Here, a and b = operand, + = operator
+
+        // unary and binary operand
+        // unary operator = single operand
+        // ex.
+        // let x = 1;
+        //     x = -x;
+        //     console.log(x); //unary operand=x and -1(- unary)
+
+        // Binary operator = 2 operand
+        // Ex.
+        // let a = 10, b = 20;
+        // console.log(a + b);
+
+        // javascript supports the following Mathematical Operations:
+        // 1. Addition(+)
+        // 2.Substraction(-)
+        // 3.Mutiplication(*)
+        // 4.Division(/)  // returns the quotient
+        // 5.Modulo or Remainder(%)  //returns the Remainder
+        // 6.Exponentiation operator(**) //used to find the power using double *
+
+        // Remainder
+        // console.log(4 % 2);  //0 
+        // console.log( 12 % 5); //2
+
+        // Exponential  - power and square root
+        // console.log(2 ** 2); //4 i.e 2 to the power of 2
+        // console.log(2 ** 3); //8 i.e 2 to the power of 3
+
+        // console.log(9 ** (1/2));//3 i.e sq. root of 9 is 3
+
+        // // String Concatenation with Binary '+'
+        // let fName = 'Skillsafari';
+        // let lName = 'Edukeys';
+        // let fullName = fName + lName;
+        // console.log(fullName);
+        // console.log('Hello..,' + 'World!!!!');
+         
+        // let fName and let fname  are different : variables are case-snsitive.
+        // Binary (+)
+        // console.log('2' + 1); //21
+        // console.log(1 + '2');  //12
+        // console.log(2 + 2 + '1'); //41
+        // console.log('2' + 2 + 1); //221 ir will the whole no. as string because of 1st no.
+
+        // console.log('6' - 2); //4
+        // console.log('6' / '3'); //2
+
+
+        // Numeric Conversion, unary "+"
+        // let num1 = '2';
+        // let num2 = '3';
+        // console.log(num1 + num2); //23
+
+        // let num1 = '2';
+        //  let num2 = '3';
+        //  console.log(+num1 + +num2); //5
+        //  console.log(Number(num1) + Number(num2)); //5
+
+
+        // operator precedence:
+        // Refer:https://www.youtube.com/watch?v=kYOlfPjZN28&list=PLgXKK3W0kXtoyshtI41YW73lbOjNVTfOk&index=4&t=1492s
+     
+        // Assignment (=)
+        // It is also an operator which returnsa value.
+
+        // let y = 2 * 2 + 1; //(2 * 2 = 4) => 4 + 1 => 5
+        // console.log(y); //5
+
+        // let m = 1, n = 2;
+        // let o = 3 - (m = n + 1);
+        // console.log(m); // 3
+        // console.log(o); // 0
+
+        // Chaining the Assignments
+        // let a, b, c;
+        // a = b = c = 2 + 2;
+        // console.log(a, b, c);// 4 4 4   
+
+        // Increement and Decreement
+        // Increement: ++ = increases the variable by 1
+        // Decreement: -- = Decreases the variable by 1.
+
+        // let counter = 2;
+        // counter++; //3
+        // console.log(counter); //3
+
+
+        // let counter = 5;
+        // counter--; //4
+        // console.log(counter); //4
+
+        // Imcreement and Decreement with Assignment
+        let counter = 1;
+        let a = ++counter; //increements and return the new value
+        console.log(a); //2
+
+        let counter1 = 1;
+        let b = counter1++; //increments but returns the old value
+        console.log(b); //1
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

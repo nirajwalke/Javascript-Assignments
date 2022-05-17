@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Weakmap and Weakset">
+    <title>Javascript - Weakmap and Weakset</title>
+</head>
+<body>
+    <script>
+        // WeakMap and WeakSet
+
+        // WeakMap
+        // similar like Map
+        // Map - key can be of any type
+        // WeakMap - key must be an Object
+        // Object - key must be a string
+
+        // methods
+        // new weakMap()
+        // weakMap.get(key);
+        // weakMap.set(key, value);
+        // weakMap.delete(key);
+        // weakMap.has(key)
+
+        // not supported methods
+        // keys(), values(), entries()
+
+        // let john = { name: 'John' };
+        // // Creating weakMap
+        // let weakMap = new WeakMap();
+        // weakMap.set(john,'user');
+        // console.log(weakMap);
+
+        // let john = { name: 'John' };
+        // console.log(john);
+        // john = null;
+        // console.log(john);
+
+        // let john = { name: 'John' };
+        // let array = [ john ];
+        // console.log(array);
+        // john = null;
+        // console.log(john);
+
+        // using Object as WeakMap key, we can avoid garbage  collection whenever the object is destroyed
+        // Because objects are copied by reference
+        // let weakmap = new WeakMap();
+        // let john = { name:'John', age:30, isAdmin:true }; // hr, development, testing, project manager
+        // let jack = { name:'Jack', age:20, isAdmin:false };
+        // let mary = { name:'Mary', age:18, isAdmin:true };
+        // weakmap.set(john,'John Profile');
+        // weakmap.set(jack,'Jack Profile');
+        // weakmap.set(mary,'Mary Profile');
+        // console.log(weakmap.get(john)); // John Profile
+        // console.log(weakmap.get(jack)); // Jack Profile
+        // console.log(weakmap.get(mary)); // Mary Profile
+        // john = null;
+        // console.log(weakmap.get(john)); // undefined
+        // console.log(weakmap.get(jack)); // Jack Profile
+        // console.log(weakmap.get(mary)); // Mary Profile
+
+
+        // Weakset()
+        // similar to set, key must be of object - dubplicate entries are not allowed
+        // set, add(), has(), delete() - supported methods
+        // keys(), values(), entries(), size - not supported
+
+        let user = new WeakSet();
+        let john = { name:'John', age:30, isAdmin:true }; // hr, development, testing, project manager
+        let jack = { name:'Jack', age:20, isAdmin:false };
+        let mary = { name:'Mary', age:18, isAdmin:true };
+        user.add(john);
+        user.add(jack);
+        user.add(mary);
+        // console.log(user);
+        
+        console.log(user.has(john)); // true
+        // console.log(user.has(edukeys));
+        john = null;
+        console.log(user);
+
+    </script>
+</body>
+</html>

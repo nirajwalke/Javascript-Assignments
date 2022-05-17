@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - removeAttribute()">
+    <title>DOM - removeAttribute()</title>
+</head>
+<body>
+    <a href="http://www.skillsafari.in" 
+    target="_blank"
+    id="skillsafari"
+    rel="noopener noreferrer">
+    http://www.skillsafari.in
+     </a>
+    <script>
+        // DOM - removeAttribute() - returns 'undefined'. if attribute exists, remove the attribute
+        // Syntax:
+        // element.getAttribute(attributeName)
+        let link = document.querySelector('#skillsafari');
+        if(link) {
+           let attr = link.removeAttribute('rel');
+           console.log(attr); // undefined
+        }
+    </script>
+</body>
+</html>

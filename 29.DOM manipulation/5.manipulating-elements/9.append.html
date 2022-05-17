@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - append method">
+    <title>DOM - append method</title>
+</head>
+<body>
+    <ul id="tech">
+        <li>JavaScript</li>
+
+    </ul>
+    <script>
+        // append()
+        // parentNode.append()
+        // inserts a set of node objects or DOMstring objects after the last child of a parent node
+        // parentNode.append(...nodes)
+        // parentNode.append(...DOMstrings); // UTF-16
+        
+        // 1. append an elements
+        let tech = document.querySelector('#tech');
+        let langs = [  'C', 'C++', 'Java', 'TypeScript'  ];
+        let nodes = langs.map((lang) => {
+            let li =  document.createElement('li');
+            li.textContent = lang;
+            return li;
+        });
+        tech.append(...nodes);
+
+        // 2. append text to an Element
+        let tech = document.querySelector('#tech');
+        tech.append('append() Text Demo');
+        console.log(tech.textContent);
+    </script>
+</body>
+</html>

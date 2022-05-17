@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Array Methods - usecase">
+    <title>Javascript - Array Methods - usecase</title>
+</head>
+<body>
+    <script>
+        // Array Methods - Usecase
+        // filter(), find(), reduce(), every() and some()
+
+        // // filter()
+        // let students = [
+        //     { name: 'John', dept: 'CSE', age: 18, isSelected: true }, // [0]
+        //     { name: 'Peter', dept: 'ECE', age: 21, isSelected: false }, // [1]
+        //     { name: 'Mary', dept: 'EEE', age: 20, isSelected: true }, // [2]
+        // ];
+    //     let selectedStudents = [];
+    //     for ( let i = 0; i < students.length; i++){
+    //         let temp = students[i];
+    //         if (temp.isSelected == true){
+    //             selectedStudents.push(temp);
+
+    //         }
+    //     }
+    //    console.log(selectedStudents);
+                 
+                // Using Arrow Function
+    // let selectedStudents = students.filter((student) => student.isSelected == true);
+    // // let selectedStudents = students.filter((student) => student.isSelected);
+    // console.log(selectedStudents);
+
+    // find()
+    // let students = [
+    //         { name: 'John', dept: 'CSE', age: 18, isSelected: true }, // [0]
+    //         { name: 'Peter', dept: 'ECE', age: 21, isSelected: false }, // [1]
+    //         { name: 'Mary', dept: 'EEE', age: 20, isSelected: true }, // [2]
+    //         { name: 'Jack', dept: 'CSE', age: 22, isSelected: false }, // [3]
+    //     ];
+    //     // department = 'CSE'
+    //     let department = students.find((student) => student.dept == 'CSE');
+    //     console.log(department);
+
+    //     let departmentFilter = students.filter((student) => student.dept == 'CSE');
+    //     console.log(departmentFilter);
+
+        //  transform()
+        // map()
+        let students = [
+            { name: 'John', dept: 'CSE', age: 18, isSelected: true }, // [0]
+            { name: 'Peter', dept: 'ECE', age: 21, isSelected: false }, // [1]
+            { name: 'Mary', dept: 'EEE', age: 20, isSelected: true }, // [2]
+            { name: 'Jack', dept: 'CSE', age: 22, isSelected: false }, // [3]
+        ];
+        let studentsName =  students.map((student) =>  student.name );
+        console.log(studentsName); // ['John', 'Peter', 'Mary', 'Jack']
+
+        let studentsDept = students.map((student) => student.dept );
+        console.log(studentsDept); // ['CSE', 'ECE', 'EEE', 'CSE']
+
+        let studentCourse = students.map((student) => {
+            return {
+                name: student.name,
+                course: student.dept,
+            }
+        });
+        console.log(studentCourse);
+
+
+
+
+    </script>
+    
+</body>
+</html>

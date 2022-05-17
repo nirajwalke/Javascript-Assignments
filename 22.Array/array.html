@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Arrays">
+    <title>Javascript - Arrays</title>
+</head>
+
+<body>
+    <script>
+        // Arrays 
+        // Array works similar to an object
+        //  object - store data in key - value pair (not in sequence)
+        // Arrays stores the data as ordered collection(in sequence)
+
+        // Declaration
+        // 1. let arr = new Array()
+        // 2. let arr = []
+
+        // objects
+        // let subjects = {
+        //     subjectOne : 'English',
+        //     subjectTwo : 'Maths',
+        //     subjectThree : 'Physics',
+        //     subjectFour : 'Chemistry',
+        // };
+        // console.log(subjects.subjectTwo); // Maths
+        // console.log(subjects['subjectThree']); // Physics
+
+        // Arrays
+        // let subjects = ['English', 'Maths', 'Physics', 'Chemistry'];
+
+
+        //   Implicitly working of Array
+        // let subjects = [
+        //     subjects[0] = 'English',
+        //     subjects[1] = 'Maths',
+        //     subjects[2] = 'Physics',
+        //     subjects[3] = 'Chemistry',
+        // ];
+
+        // console.log(subjects[2]); // Physics
+        // console.log(subjects[3]); // Chemistry
+
+        // // Modifying an Array element by Index
+        // subjects[2] = 'Computer';
+        // console.log(subjects[2]); // computer
+        // console.log(subjects); //  ['English', 'Maths', 'Computer', 'Chemistry']
+
+        // // Add new value to an array by using Index
+        // subjects[4] = 'History';
+        // console.log(subjects[4]); // History
+        // console.log(subjects); // ['English', 'Maths', 'Computer', 'Chemistry', 'History']
+
+        // // Find the length of an Array
+        // console.log(subjects.length); // 5 // History is added
+
+        // // Array can store element of any type
+        // let arr = ['Apple', { name: 'John' }, true, function () { console.log('Array') }];
+        // console.log(arr[0]); // Apple
+        // console.log(arr[1].name); // John
+        // console.log(arr[2]); // true
+        // arr[3](); // Array
+
+
+        // Methods : pop()/push() and shift()/unshift()
+        // pop() / push() - methods are work with the end of the Array
+
+
+
+        // pop() - Extracts the last element of the array and return it
+        //    let subjects = [
+        //        'English', 'Maths', 'Physics',
+        //    ];
+        //    console.log(subjects.pop()); // physics
+        //    console.log(subjects); //  [0-'English', 1-'Maths']
+
+        //     // push() - Append the element to the end of the array
+        //     (subjects.push('Computer')); 
+        //     console.log(subjects);  // [ 0-'English', 1-'Maths', 2-'Computer']
+
+
+
+        //  shift() / unshift() - methods work with the beginning of the array
+        // shift() - Extracts the first element of the array and return it
+        // let subjects = [
+        //     'English', 'Maths', 'Physics',
+        // ];
+        // console.log(subjects); // ['English', 'Maths', 'Physics']
+        // console.log(subjects.shift());
+        // console.log(subjects); // [0-'Maths', 1-'Physics']
+
+        // // unshift() - add the element to the biginning of the array
+        // subjects.unshift('Computer');
+        // console.log(subjects); // [0-'Computer', 1-'Maths', 3-'Physics']
+
+
+
+        // Using push() and ushift() together
+        // let subjects = ['Maths'];
+        // console.log(subjects); // ['Maths']
+        // subjects.push('computer', 'physics');
+        // console.log(subjects); // ['Maths', 'computer', 'physics'] //  add the element end of the array 
+        // subjects.unshift('Chemistry', 'English');
+        // console.log(subjects); // ['Chemistry', 'English', 'Maths', 'computer', 'physics'] // add the element beginning of the array
+
+        // Performance
+        // pop()/Push() Vs shift()/unshift()
+        // pop() / push() - High Performance
+        // let subjects = ['Maths']
+        // console.log(subjects);
+        // subjects.push('Physics', 'Chemistry');
+        // console.log(subjects);
+        // subjects.pop();
+        // console.log(subjects);
+
+        // shift() / unshift() - low performance because it is dealing with the index at the beginning
+        // let subjects = ['Maths']
+        // console.log(subjects);
+        // subjects.unshift('Physics', 'Chemistry');
+        // console.log(subjects);
+        // subjects.shift();
+        // console.log(subjects);
+
+
+        // loops in Array
+        // let subjects = ['English', 'Physics', 'Chemistry', 'Maths', 'Computer'];
+        // for ( i == 0 ; i < subjects.length ; i++){
+        //     console.log(subjects[i]);
+        // }
+
+        //  for .... of loop in array
+        // let subjects = ['English', 'Physics', 'Chemistry', 'Maths', 'Computer'];
+        // for ( let subject of subjects){
+        //     console.log(subject);  // let subject = 'English' // subject = 'Physics'......
+        // }
+
+        // let fruits = ['Apple', 'Orange', 'Banana', 'Cherry'];
+        // for ( let fruit of fruits ){
+        //     console.log(fruit);
+        // }
+
+        // // for....in
+        // for( let abc in fruits){
+        //     console.log(fruits[abc]);
+        // }
+
+        // Resetting the Array by 'length' property
+        // let arr = [ 1, 2, 3, 4, 5];
+        // console.log(arr);
+        // console.log(arr.length); // 5
+        // arr.length = 2 ;
+        // console.log(arr);
+
+        // console.log(arr[4]); // undefined
+
+        // arr.length = 0 ;
+        // console.log(arr);
+
+        // Multidimensional Arrays - Array inside an Array
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        // Inside an Array
+
+        //        1  2   3
+        //  0    [1, 2, 3]  // [0][0] - [0][1] - [0][2]
+        //  1    [4, 5, 6]  // [1][0] - [1][1] - [1][2]
+        //  2    [7, 8. 9]  // [2][0] - [2][1] - [2][2]
+
+        console.log(matrix[2][2]); // 9
+
+        // toString
+        // [1] + 1 === '1' + 1 => '11'
+        console.log( [] + 1 ); // 1
+        console.log( [1] + 1 ); // 11
+        console.log( [1,2] + 1 ); // 1, 21
+
+        console.log( '' + 1 ); // 1
+        console.log( '1' + 1 ); // 11
+        console.log( '1,2' + 1 ); // 1, 21
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

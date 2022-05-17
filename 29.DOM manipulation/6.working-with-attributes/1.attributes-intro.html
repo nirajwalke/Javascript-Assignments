@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Working with Attributes">
+    <title>DOM - Working with Attributes</title>
+</head>
+<body>
+    <input type="text" id="username" tabindex="1">
+    <input type='checkbox' id='chkAccept' checked><Accept></input>
+        <input type="password" id="password" style="color:red; width: 100%;">
+    <script>
+        // Working with attributes
+        // <input type='text' id='username'>
+        // web browser will generate an HTMLInputElement object
+        // input element with 'type' and 'id' attribute
+        // HTMLInputElement object: type: 'text' and id:'username'
+        // input.type and input.id
+
+           // <input type='text' id='username' secured='true'>
+        //    let input = document.querySelector('#username');
+        //    console.log(input.secured);// undefined
+
+        //    Attribute methods
+        // 1. element.getAttribute(name) - get the attribute value
+        // 2. element.setAttribute(name, value ) - set/Modify the  value for the attribute
+        // 3. element.hasAttribute(name) - check for the existence of an  attribute 
+        // 4. element.removeAttribute(name) - remove the attribute
+
+        // element.attributes - provides a live collection of attributes available on a specific element
+        // let input = document.querySelector('#username');
+        // for( let attr of input.attributes){
+        //     console.log(`${attr.name} = ${attr.value}`);
+        // };
+
+        // Attribute property synchronization
+        // let input = document.querySelector('#username');
+        // console.log(input);
+        // input.setAttribute('tabIndex', 2) ;
+        // console.log(input.tabIndex);
+
+        // input.tabIndex = 3;
+        // console.log(input.getAttribute('tabIndex'));
+
+        // let input = document.querySelector('#username');
+        // console.log(input);
+        // input.setAttribute('value', 'guest') ;
+        // console.log(input.value); // guest
+
+        // input.value = 'admin';
+        // console.log(input.getAttribute('value')); // guest
+
+        // <input type='checkbox' id='chkAccept' checked><Accept></input>
+            let chkbox = document.querySelector('#chkAccept');
+            console.log(chkbox.checked);
+
+            let input = document.querySelector('#password');
+            console.log(input);
+            // style property is a object 
+            console.log(input.style);
+            let styleAttr = input.getAttribute('style');
+            console.log(styleAttr);
+
+
+
+
+    </script>
+</body>
+</html>

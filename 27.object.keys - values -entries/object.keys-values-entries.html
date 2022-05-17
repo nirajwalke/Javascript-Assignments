@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Object.keys(), values() and entrie()">
+    <title>Javascript - Object.keys(), values() and entrie()</title>
+</head>
+<body>
+    <script>
+        // Objecct.keys, Object.values() and Object.entries()
+        // keys(), values(), entries()
+        // Map
+        // set
+        // Array
+
+        // Object also supports the above methods with different Syntax
+        // Object.keys(obj) - return an array of keys
+        // Object.values(obj) - return an array of values
+        // Object.entries(obj) - return an array of [key, value] pair
+
+        let user = {
+            name: 'John',
+            age:20,
+            isAdmin:true,
+            designation:'Full-Stack-Developer',
+        };
+        // console.log(Object.keys(user)); // ['name', 'age', 'isAdmin', 'designation']
+        // for ( let key of Object.keys(user)){
+        //     console.log(key); // name
+        //                       // age
+        //                       // isAdmin
+        //                       // designation
+        // };
+        // Object.keys(user).forEach(key => {
+        //     console.log(key); // name
+        //                       // age
+        //                       // isAdmin
+        //                       // designation
+        // });
+
+        // Object.values(obj)
+        // console.log(Object.values(user));
+
+        // for (let value of Object.values(user)){
+        //     console.log(value);// John
+                                  // 20
+                                  // true
+                                  // Full-Stack-Developer
+        // };
+
+        // Object.values(user).forEach(value => {
+            //  console.log(value);  // John
+                                  // 20
+                                  // true
+                                  // Full-Stack-Developer
+        // });
+
+
+        // Object.entries(obj)
+        // console.log(Object.entries(user));
+        // for ( let [key,value] of Object.entries(user)) {
+        //     console.log([key,value]);
+        // };
+        // Object.entries(user).forEach((value, key) => {
+        //     console.log(key,value);
+        // });
+
+        // Transforming objects
+        // map() and filter() - not supported by Object
+        // Object.entries(obj) - Object into Array
+        // Apply map()/filter() - transforming the array
+        // Object.fromEntries(array) - Array in to object
+        
+        let prices = {
+            pencil:1,
+            pen:2,
+            eraser:4,
+        };
+        // doubling the price
+        let doublePrice = Object.fromEntries(
+                                 Object.entries(prices).map(entry => [ entry[0], entry[1] * 2 ] )
+        );
+        console.log(doublePrice);
+ 
+
+
+
+
+    </script>
+    
+</body>
+</html>

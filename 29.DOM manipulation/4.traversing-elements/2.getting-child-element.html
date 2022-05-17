@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM manipulation - Getting the child element">
+    <title>DOM manipulation - Getting the child element</title>
+</head>
+<body>
+   <ul id="subjects">
+       <li class="first">English</li>
+       <li>Maths</li>
+       <li>Physics</li>
+       <li class="current">Chemistry</li>
+       <li>Computer</li>
+       <li>Commerce</li>
+       <li class="last">History</li>
+       
+   </ul>
+
+    <script>
+        let elements = document.querySelectorAll('#subjects');
+        console.log(elements);
+        
+        // Accessing first child
+        // let content = document.querySelector('#subjects');
+        // let firstChild = content.firstElementChild;
+        // console.log(firstChild);
+
+        // Accessing last child
+        // let content = document.querySelector('#subjects');
+        // console.log(content.lastElementChild);
+
+        // Accessing all the child
+        let content = document.querySelector('#subjects');
+        console.log(content.children);
+        
+
+    </script>
+</body>
+</html>

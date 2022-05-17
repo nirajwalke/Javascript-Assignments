@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Manipulating Element">
+    <title>DOM - Manipulating Element</title>
+</head>
+<body>
+    <h1>DOM - Manipulating Elements - createElement()</h1>
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+    <script>
+        // creating a new element
+        // Syntax: createElement()
+        // document.createElement(htmlTag)
+
+        // 1.creating a new div element
+        // create a element
+        // let div = document.createElement('div');
+        // Add innerHtml tag
+        // div.innerHtml = <p> createElement example </p>
+        // Append the newly created element into the 'body' as 'child' element
+        // document.body.appendChild(div) 
+
+        // let divEle = document.createElement('div');
+        // divEle.innerHTML = '<p>createElement example </p>';
+        // document.body.appendChild(divEle);
+
+        // // create an element
+        // let h1Ele = document.createElement('h1');
+        // h1Ele.className = 'newElem';
+        // h1Ele.innerHTML = 'I am virtually added by Javascript';
+        // document.body.appendChild(h1Ele);
+
+        // Adding id and class to the div
+        // let divEle = document.createElement('div');
+        // divEle.id = 'content';
+        // divEle.className = 'note';
+        // divEle.innerHTML = '<p>createElement example</p>';
+        // document.body.appendChild(divEle);
+
+        // Add text to div
+        // let divEle = document.createElement('div');
+        // divEle.id = 'content';
+        // divEle.className = 'note';
+        // let text = document.createTextNode('This text is for div element');
+        // divEle.appendChild(text);
+        // document.body.appendChild(divEle);
+
+        // Add an element to a div
+        // let divEle = document.createElement('div');
+        // divEle.id = 'content';
+        // divEle.className = 'note';
+        // let h1Ele = document.createElement('h1');
+        // h1Ele.textContent = 'I am inside div tag';
+        // divEle.appendChild(h1Ele);
+        // document.body.appendChild(divEle);
+
+        // 2. create new list items
+        let menu = document.querySelector('#menu');
+        let liEle = document.createElement('li');
+        liEle.textContent = 'Services';
+        menu.appendChild(liEle);
+
+    </script>
+    
+</body>
+</html>

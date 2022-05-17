@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Web API - IndexedDB">
+    <title>Web API - IndexedDB</title>
+</head>
+<body>
+    <!-- 
+        IndexedDB is a large-scale object store built into the browser
+        The IndexedDB allows us to store the date using key-value pair
+        Can store: Number, String, Boolean, Null, Undefined, Date, Arrays, Objects
+        let user = {
+            firstName: 'SkillSafari',
+            lastName: 'EduKeys',
+            age: 30,
+            designation: 'Full-stack Developer',
+            address: {
+                doorNo: 123,
+                street: 'xyz'
+            },
+            hobbies: ['Cricket', 'Football'],
+        }
+        IndexedDB - Create a database - 'n' number of object store
+        Each domain we can able to create only one database
+        NoSQL - No need to use SQL Queries for quering the database
+        SQL - CREATE, UPDATE, DELETE, DROP, ALTER
+        CRUD - Create, Read, Update, Delete
+
+        IndexedDB allows us to create web applications that can work in both online and offline
+
+        // 1. IndexedDB databases store the data in key-value pair
+        // 2. IndexedDB is transactional 
+        // 3. IndexedDB API is mostly asynchronous
+        // 4. IndexedDB is a NoSQL system
+        // 5. IndexedDB follows the same-origin policy
+        // Ex: www.skillsafari.in       // www.edukeys.in
+
+        // Steps for creating IndexedDB
+        // 1. check if the IndexedDB is suppored by our browser
+        // window.indexedDB
+
+        // 2. Open a database
+        // indexedDB.open('databaseName', version); return IDBOpenDBRequest object
+
+        // 3. Create object stores
+        // First time object store creation
+        // onupgradeneeded()
+        // createObjectStore('objectStoreName', { definesObjectStoreRules })
+        // createIndex('propertyName', { indexRules }) // uniquely identify the objectStore property
+        
+        // 4. Insert data into object stores
+        // database, object
+        // transaction('objectStoreName', 'permission'); // permission: 'readwrite', 'readonly'
+        // objectStore('objectStoreName')
+        // put(object)
+        // close() // end the transaction
+
+        // 5. Read data from objectStore by key
+        // db, id
+        // transaction('objectStoreName', 'permission')
+        // objectStore('objectStoreName')
+        // get(id)
+        // close() // end the transaction
+
+        // 6. Read data from objectStore by an index
+        // db, indexName
+        // transaction('objectStoreName', 'permission')
+        // objectStore('objectStoreName')
+        // result = index('indexName')
+        // get(result)
+        // close() // end the transaction
+
+        // 7. Read all the data from the objectStore
+        // db
+        // transaction('objectStoreName', 'permission')
+        // objectStore('objectStoreName')
+        // openCursor() // Access all the data object one by one from the objectStore
+        // close() // end the transaction
+
+        // 8. Delete a data in the objectStore
+        // db, id
+        // transaction('objectStoreName', 'permission')
+        // objectStore('objectStoreName')
+        // delete(id)
+        // close() // end the transaction
+
+     -->
+     <script src="./js/index.js"></script>
+</body>
+</html>

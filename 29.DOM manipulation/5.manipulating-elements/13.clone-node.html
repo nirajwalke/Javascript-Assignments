@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - cloneNode()">
+    <title>DOM - cloneNode()</title>
+</head>
+<body>
+    <ul id="subjects">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        // cloneNode()
+        // let cloneNode = originalNode.cloneNode(deep)
+
+        // deep
+        // if deep is 'true', then the original node and all of its descendants are cloned 
+        // if deep is 'false', only the original node will be cloned. All the descendants will not be cloned 
+        // default, deep value is 'false'
+
+        // return
+        // copy of the originalNode
+        let subjects = document.querySelector('#subjects');
+        let clonedsubjects = subjects.cloneNode(true);
+        clonedsubjects.id ='clone-subjects';
+        document.body.appendChild(clonedsubjects);
+
+
+    </script>
+</body>
+</html>

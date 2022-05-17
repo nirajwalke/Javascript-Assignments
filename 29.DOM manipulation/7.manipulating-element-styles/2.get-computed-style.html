@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - getComputedStyle()">
+    <title>DOM - getComputedStyle()</title>
+    <style>
+        body{
+            font: arial,sans-serif;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        p::first-letter{
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+        .message{
+         background-color: crimson;
+         /* border: solid 1px violet; */
+         padding:20px ;
+         color: black;
+        }
+    </style>
+</head>
+<body>
+    <p class="message" style="color: red;"> DOM - getComputedStyle </p>
+    <p id="main"> DOM - getComputedStyle() for pseudo-element</p>
+    <script>
+        // DOM - getComputedStyle()
+        // Syntax:
+        // let style = window.getComputedStyle(element, pseudoElement)
+        // element - element which we want to return the computed styles
+        // pseudoElement - specifies the pseudo-element to watch. default value of pseudo-element is 'null'.
+        // return - CSSStyleDeclaration object
+        
+        // Example:
+        // <a>click</a>
+        // let link =  document.querySelector('a');
+        // let style = getComputedStyle(link.':hover')
+
+        // Ex. 1 - Simple getComputedStyle()
+        // let message = document.querySelector('.message');
+        // let style = getComputedStyle(message);
+        // console.log('color:', style.color);
+        // console.log('background color : ', style.backgroundColor);
+        // console.log('font family:',style.fontFamily);
+        // console.log('border: ',style.border);
+
+        // Ex. 2 - getComputedStyle() for pseudo - elements
+        let p = document.querySelector('#main');
+        let style = getComputedStyle(p, '::first-letter');
+        console.log(style.fontSize); // 24px
+
+    </script>
+</body>
+</html>

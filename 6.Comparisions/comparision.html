@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javasript-Comparision">
+    <title>Javasript-Comparision</title>
+</head>
+<body>
+    <script>
+        // Comparisions
+        //  >, <, >=, <=, ==, !=
+        // Greater than (>)
+        // less than (<)
+        // Greater than equal to (>=)
+        // Less than equal to (<=)
+        // Equal to (==)
+        // Not Equal to (!=)
+
+        // Boolean (True or False) is the result for all the comparision Operations 
+        // true - yes or correct or the truth or 1
+        // false - no or incorrect or the false or 0
+          
+        //   Numeric Comparisions
+        
+        console.log(2 > 1); // true
+        console.log(2 == 1);  //false
+        console.log(2 != 1);  //true
+        let result = 5 > 4;
+        console.log(result); //true 
+
+        // String Comparisions
+        console.log('Z' > 'A');  // 90 > 65 ASCII TABLE
+        console.log('Glow' > 'Glee');  // G will G, l will l, o will e = o > e, 111 > 101 //true  
+        console.log('Bee' > 'Be') // true
+
+        // Comparision of Different types
+        console.log('2' > 1); // true - will consider the alphanumeric
+        console.log('01' == 1); //true - will consider the alphanumeric
+        console.log(true == 1); //true
+        console.log(false == 0); //true
+
+        // Strict Equality  (===) will check the datatype also
+        console.log('01' === 1); // false
+        console.log(true === 1);  // false
+        console.log(false === 0); // false
+        console.log( null == undefined); //true
+        console.log(null === undefined); //false
+
+        //null vs 0
+        console.log( null > 0 ); //false
+        console.log( null == 0 ); //false
+        console.log( null >= 0 ); //true
+
+        // Undefined
+        console.log( undefined > 0); //false
+        console.log( undefined < 0); //false
+         console.log( undefined >= 0); //falses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

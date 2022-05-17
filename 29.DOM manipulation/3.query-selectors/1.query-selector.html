@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM manipulation - querySelector">
+    <title>"DOM manipulation - querySelector"</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/logo.jpg" alt="logo" id="logo">
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li class="menu-item current"> <a href="#home">Home</a> </li>
+                <li class="menu-item current"> <a href="#services">Services</a> </li>
+                <li class="menu-item current"> <a href="#about">About</a> </li>
+                <li class="menu-item current"> <a href="#contact">Contact</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>DOM manipulation - querySelector()</h1>
+        <div class="container">
+            <section class="section-a">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus architecto incidunt maxime rem facere dolore animi perspiciatis laudantium eius reiciendis repellat eaque quam labore consequuntur iure delectus, impedit aliquam suscipit.
+                </p>
+                <button>Read more...</button>
+            </section>
+            <section class="section-b">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus architecto incidunt maxime rem facere dolore animi perspiciatis laudantium eius reiciendis repellat eaque quam labore consequuntur iure delectus, impedit aliquam suscipit.
+                </p>
+                <button>Read more...</button>
+            </section>
+            <section class="section-c">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus architecto incidunt maxime rem facere dolore animi perspiciatis laudantium eius reiciendis repellat eaque quam labore consequuntur iure delectus, impedit aliquam suscipit.
+                </p>
+                <button>Read more...</button>
+            </section>
+        </div>
+    </main>
+</body>
+
+<script>
+    // querySelector('classSelectors')
+        // 1. Universal Selectors
+
+        // let element = document.querySelector('*');
+        // console.log(element);
+        // let elementQuery = document.querySelectorAll('*');
+        // console.log(elementQuery);
+
+        // 2. Type selector
+        // let element = document.querySelector('section');
+        // let elementQuery = document.querySelectorAll('section');
+        // console.log(element);
+        // console.log(elementQuery);
+         
+        // 3. Class selector
+        // let element = document.querySelector('.menu-item');
+        // let elementQuery = document.querySelectorAll('.menu-item');
+        // console.log(element);
+        // console.log(elementQuery);
+
+        // 4. ID selector
+        // let element = document.querySelector('#logo');
+        // console.log(element);
+
+        // 5. Attribute selector
+        // [attribute]
+        // let element = document.querySelector('[src]');
+        // let element = document.querySelector('[class="section-b"]');
+        // console.log(element);
+
+        // 6. Grouping the selectors
+        // let element = document.querySelectorAll('nav,section');
+        // console.log(element);
+
+        // Combinators
+        // 1. descendant selector
+        //  let element = document.querySelector('div section');
+        //  console.log(element);
+        // let elementQuery = document.querySelectorAll('div section');
+        // console.log(elementQuery);
+
+        // 2. Child selector
+        let element = document.querySelector('ul > li');
+         console.log(element);
+        let elementQuery = document.querySelectorAll('ul > li');
+        console.log(elementQuery);
+
+
+</script>
+
+
+</html>

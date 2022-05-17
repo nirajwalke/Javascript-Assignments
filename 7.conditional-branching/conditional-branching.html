@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript-Conditional Branching">
+    <title>Javascript-Conditional</title>
+</head>
+<body>
+    <script>
+        // Conditional Branching
+        // 'if' statement and '?:' conditional operator
+
+        //'if' statement
+        // Syntax
+        // if( condition == true ){
+            // true statement
+        // }
+            
+            // let year = prompt('Enter your Date of Birth', 2021);
+            // if( year == 2021){
+            //     console.log('Thanks for your Information');
+            //     console.log(' testing "if" statement');
+            //     console.log('Hello');
+            // }
+            // console.log('Outside "if" statement ');
+
+        // Else Statement
+        // Syntax
+        // if( condition == true ){
+        //     // true statement
+        // }
+        // else{
+        //    // False statement
+        // }
+        
+        // let year = prompt('Enter your Date of Birth', 2021);
+        //     if( year == 2021){ // true or 1 / false or 0
+        //         console.log('Thanks for your Information');
+        //         console.log(' testing "if" statement');
+        //         console.log('Hello');
+        //     } else{
+        //         console.log('outside  "if" statement ');
+        //         console.log('False Statements');
+        //     }
+              
+
+            //Multiple branching - 'else if'
+            // syntax 
+            // if ( condition-1 == true){
+            //     //condition-1 true statements
+            // } else if( condition-2 == true){
+            //     //condition-2 true statements
+            // } else if( condition-n == true){
+            //     //condition-n true statements
+            // } else{
+            //     //false Statements
+            // }
+
+        //  let year = prompt('In which year India got Independence',1947);
+        //  if( year < 1947 ){
+        //       console.log('Too early...');
+        //  }  
+        //  else if( year > 1947){
+        //      console.log('too late');
+        //  } else{
+        //      console.log('Exactly...');
+        //  }
+
+        //  Conditional Operator
+        // Syntax
+        // (condition == true ) ? 'Truthy statement' : 'Falsy statement'
+
+         
+        // let year = prompt('Enter your Date of Birth', 2021);
+        //     if( year == 2021){ // true or 1 / false or 0
+        //         console.log('Thanks for your Information');
+        //         console.log(' testing "if" statement');
+        //         console.log('Hello');
+        //     } else{
+        //         console.log('outside  "if" statement ');
+        //         console.log('False Statements');
+        //     }
+
+        // let year = prompt('Enter your Date of Birth', 2021);
+        // let result = ( year == 2021) ? 'From "if" section' : 'From "else" section '
+        // console.log(result);
+
+        let age = prompt('age?',18);
+        let message = ( age < 3) ? 'Hello Baby...' :
+                       ( age < 18) ? 'Hello...':
+                       ( age < 100) ? 'Greetings...' :
+                       'try again later'
+        console.log(message);
+
+
+
+
+    </script>
+</body>
+</html>

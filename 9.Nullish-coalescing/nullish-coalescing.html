@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript-Nullish coalescence">
+    <title>Javascript-Nullish coalescence</title>
+</head>
+<body>
+    <script>
+        // Nullish coalescing ?? 
+        // Check wheather the variable has been assigned with a value or not.
+        // variables is defined other than 'null' or 'undefined'.
+        // a ?? b
+        // if 'a' is defined, returns 'a'.
+        // if 'b' is defined, returns 'b'.
+
+        let a = 10, b;
+        console.log( a ?? b); //10
+
+        let user;
+        console.log( user ?? 'Anonymous');// Anonymous
+
+        let user1 = 'John';
+        console.log( user1 ?? 'Anonymous');// john
+
+        let fName = null;
+        let lName = null;
+        let nickName = 'Skillsafari';
+        console.log( fName ?? lName ?? nickName); // Skillsafari
+
+        //  ?? vs ||
+        let height = 0;
+        console.log( height ?? 100); // 0 -  it will check the variable assigned or not.
+        console.log( height || 100); // 100 - || will check the first truthy value
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

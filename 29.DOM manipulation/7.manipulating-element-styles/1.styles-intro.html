@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Styles - Intro">
+    <title>DOM - Styles - Intro</title>
+    
+</head>
+<body>
+    <h1 id="heading "> DOM - Styles Intro</h1>
+    <p id="content">Javascript - paragraph Tag</p>
+    <script>
+        // DOM - styles
+        // set inline styles
+        // Syntax:
+        // element.style.CSSstyleName = CSSstyleValue;
+        // CSSproperties should be represented in camelCase notation
+        // Ex: text-align => textAlign, font-family => fontFamily, border-width => borderWidth
+        // Ex. color => color, display => display
+
+
+        // let heading = document.querySelector('#heading');
+        // console.log(heading);
+        // heading.style.fontFamily = "'Courier New', Courier, monospace";
+
+        // // setAttribute('style'. 'color:red', background-color:red)
+        // heading.setAttribute('style', "color: crimson; text-align: center;");
+
+        function css( ele, props) {
+            for ( let prop in props) {
+                ele.style[prop] = props[prop]; // ele.style[background] = 'yellow'
+            }
+        }
+        let content = document.querySelector('#content');
+        css( content, { background: 'yellow', border: 'solid 1px red'});
+
+        content.style.fontWeight = 'bold';
+    </script>
+</body>
+</html>

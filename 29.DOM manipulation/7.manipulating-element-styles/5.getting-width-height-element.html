@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Getting width and height of an element">
+    <title>DOM - Getting width and height of an element</title>
+</head>
+<body>
+    <div class="box">
+        Hello....
+    </div>
+    <script>
+        // DOM - Getting height and width of an element
+        // offSetWidth - width including padding + border
+        // offSetHeight - height including padding + border
+
+        let box = document.querySelectorAll('.box');
+        let width = box.offsetWidth;
+        let height = box.offsetHeight;
+        console.log(box);
+
+        // clientWidth - width including padding without border
+        // clientHeight -  height including paddiing withut border
+        // let box = document.querySelector('box');
+        // let width = box.clientWidth;
+        // let height = box.clientHeight;
+
+        // margin of an element - getComputedStyle()
+        let box = document.querySelectorAll('.box');
+        let style = getComputedStyle(box);
+
+        let marginLeft = parseInt(style.marginLeft); // marginRight, marginTop, marginBottom
+
+        let borderTopWidth = parseInt(style.borderTopWidth);
+
+        // height and width of an window
+        let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+        let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        
+    </script>
+</body>
+</html>

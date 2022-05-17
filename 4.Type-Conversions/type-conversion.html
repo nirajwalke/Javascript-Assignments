@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Descriptions" content="Javascript-Type Conversions">
+    <title>Javascript-Type Conversion</title>
+</head>
+
+<body>
+    <script>
+        // Type of Conversion
+
+        // string
+        // let value = alert('Enter something');
+        // console.log(value);
+
+        // value = String(value);
+        // console.log(typeof(value));
+
+        // Numeric Conversion
+        // Number();
+        // alert('6' / '3');
+        // let str = '123';
+        // alert(typeof(str));
+
+        // let age = Number('This is string');
+        // console.log(age);
+
+        // Number(undefined) = NaN;
+        // Number(null) = 0;
+        // Number(true) = 1;
+        // Number(false) = 0
+        // Number(string) = removes the white spaces in the string and returns the number,if it presents else it returns the NaN
+
+        // console.log(Number("    123   "));
+        // console.log(Number("123z"));
+        // console.log(Number(true));
+        // console.log(Number(false));
+        // console.log(Number(null));
+
+        // Boolean Conversion
+        // Boolean
+        // result: result/false
+        // 0, empty string, null, undefined, NaN = false
+        // All other values except mentioned above = true
+
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+        console.log(Boolean(NaN));
+        console.log(Boolean('Hello'));
+        
+
+
+    </script>
+
+</body>
+
+</html>

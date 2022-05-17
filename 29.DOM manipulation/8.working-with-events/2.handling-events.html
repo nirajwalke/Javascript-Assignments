@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Handling Events">
+    <title>DOM - Handling Events</title>
+</head>
+<body>
+    <input type="button" value="save" onclick="message()">
+    <input type="button" value="click" onclick="console.log(event.target)">
+    <input type="button" value="Click - 1" onclick="console.log(this.value)">
+    <input type="button" value="Click - 2" onclick="console.log(value)">
+    <input type="button" id="btn" value="Click - 3">
+    <input type="button" id="register" value="Register">
+    <input type="button" id="De-Register" value="De-Register">
+    <script>
+        // DOM - Handling events
+        // 1. HTML event handler attributes
+        // HTML event handler attributes start with 'on', Ex. onclick, onmouseover, onkeypress
+        function message() {
+            alert('I am Clicked....');
+        }
+
+        
+        //  1. DOM level 0 event handlers
+        //  this - get access the element's property and methods
+        // let btn = document.querySelector('#btn');
+        // btn.onclick = function() {
+        //     alert(this.id);
+        // };
+
+        // btn.onclick = null; // remove the event from the element
+
+        // 2. DOM level 2 Event handlers
+        // addEventListener() - register an event handler
+        // removwEventListener() - remove an event handler
+
+        // element.addEventListener('eventType', eventFunction)
+        let btn = document.querySelector('#btn');
+        btn.addEventListener('click', function(e) {
+            console.log(e.type);
+        });
+
+        // Multiple Event handler to a single element
+        btn.addEventListener('Click',function (){
+            console.log('clicked....');
+        });
+
+        // removeEventListener(); // use eventFunction as a normal function, ( not anonymous, arrow function )
+        let register = document.querySelector('#register');
+        function showAlert() {
+            alert('Clicked....');
+        };
+        register.addEventListener('click', showAlert);
+        let deregister = document.querySelector('#De-Register');
+        deregister.addEventListener('Click' , () => {
+           register.removeEventListener('Click', showAlert)
+        });
+    </script>
+</body>
+</html>

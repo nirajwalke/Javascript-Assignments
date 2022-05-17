@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - jQuery-Introduction">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>jQuery-Intro</title>
+</head>
+
+<body>
+<!-- 
+    jQuery
+    1. most popular javascript library - 'write less, do more'
+    2. DOM manipulation, CSS manipulaion, Handles events such as mouse clicks, keypress 
+    3. Simplifies AJAX calls 
+
+    prerequisites
+    1. HTML, CSS, JavaScript
+
+    Adding jQuery
+    1. Using downloaded jQuery from https://jquery.com/download/
+    2. Using CDN
+
+
+    Syntax:
+    $(document).ready(function() {
+        // jQuery methods
+        $('selectors').click(function(){   // let name = document.querySelector(''); name.addEventListener('eventType,eventFunc')
+            $('p').hide();
+        }) 
+      })
+      $('selector')  : *, #id, .class, type
+      MouseEvents: click, dblclick, mouseenter, mouseleave, mousedown, mouseup, hover
+      FormEvents: focus, blur, submit, change
+      KeyboardEvents: keypress, keydown, keyup
+      WindowEvents: resize, scroll
+      Effects:
+           1. show, hide
+           2. Fadings: fadeIn, fadeOut, fadeToggle, fadeTo
+           3. sliding: slideDown, slideUp, slideToggle
+           4. animation: animate()
+           5. stop
+           6. callback functions
+           7. chain the methods/action
+ -->
+
+    <h1>jQuery Introduction</h1>
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p id="three">This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+    <p>This is paragraph 5</p>
+    <p>This is paragraph 6</p>
+    <p>This is paragraph 7</p>
+    <p id="eight">This is paragraph 8</p>
+    <p>This is paragraph 9</p>
+    <p>This is paragraph 10</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <script>
+        $(document).ready(function(){
+            // using DOM - let btn = document.querySelector('button')
+            // btn.onClick = () => (....)
+            $('#hide').click(function(){
+                $('p').hide();
+            });
+      
+            $('#show').click(function(){
+                $('p').show();
+            })
+        });
+    </script>
+    
+
+</body>
+
+</html>

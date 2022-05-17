@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Strings">
+    <title>Javascript - Strings</title>
+</head>
+
+<body>
+    <script>
+        // STRINGS
+        // Quote
+        // Single Quote
+        // Double Quote
+        // Backticks - ${expression/value/varName/call the function}
+
+//         let single = 'single-quote';
+//         console.log(single);
+
+//         let double = "double-quote";
+//         console.log(double);
+
+//         let backticks = `backticks`;
+//         console.log(backticks);
+
+//         // Backticks - ${expression/value/varName/call the function}
+//         // it acts like pre tag in html
+
+//         function sum(a, b) {
+//             return a + b;
+//         }
+//         console.log(`1 + 2 = ${sum(1,2)}`);
+
+//         let subjectLists = `Subjects:
+//         English
+//         Maths
+//         Physics
+//         Chemistry
+//         Computer Science
+//         `;
+//         console.log(subjectLists);
+
+//         // Special character ' \n '
+
+//         let subjectLists1 = "Subjects:\n* English \n* Maths \n* Physic \n* hemistry \n* Computer Science ";
+        
+//         console.log(subjectLists1);
+
+
+
+//         let str1 ='Hello\nWorld';
+//         let str2 = `Hello
+// World`;
+//         console.log(str1);
+//         console.log(str2);
+
+//         console.log(str1 == str2 );
+//         console.log(str1 === str2 );
+
+//         console.log("I'm Waiting");
+//         console.log(`I'm Waiting - 15"`);
+
+//         // String length
+//         // property - length
+//         let str = 'My\n';
+//         console.log(str.length); // 3
+
+        // Accessiing Characters
+        // String - 'Hello' => characters H-e-l-l-o
+        // char index starts with '0' Ex: hi => h - index(0) i - index(1)
+
+
+        // let str = 'Hello';
+
+        // // the first character of 'Hello'
+        // // Syntax: varName[index]
+        // console.log(str[0]);
+
+        // // varName.charAt(index)
+        // console.log(str.charAt(0));
+
+        // // finding last character of the string
+       
+        // console.log(str.length - 1);
+        // console.log(str[4]); 
+
+
+        // let test = 'Hello World Javascript';
+        // console.log(test.length);
+        // console.log(test[test.length - 1]);
+
+
+
+        // let str = 'Hello World';
+        // console.log(str[1000]); // undefined
+        // console.log(str.charAt(1000)); //''
+
+        // for (let char of str){
+        //     console.log(char); // 1-char = 'H' 2-char ='e'
+        // }
+        
+        // Strings - Strings are immutable - cannot be changed
+        // let str = 'Hi';
+        // str[0] = 'h';
+        // console.log(str[0]); // H
+
+        // let str = 'Hi';
+        // str = 'h' + str[1];
+        // console.log(str); // hi
+        // console.log(str[0]); // h
+
+        // changing the case - toUpperCase / toLowerCase
+        // let lowerString = 'hello';
+        // console.log(lowerString.toUpperCase()); // HELLO
+        // console.log('world'.toUpperCase());  // WORLD
+       
+
+        // let upperString = 'HELLO';
+        // console.log(upperString.toLowerCase()); // hello
+        // console.log('WORLD'.toLowerCase());  // world
+
+        // // Chanaging single character case
+        // console.log(lowerString[1].toUpperCase()); // E
+
+        // Searchinng for sub-string
+        // Methods
+        // 1. variableName.indexOf()
+        // 2. variableName.includes()
+        // 3. variableName.startsWith()
+        // 4. variableName.endsWith()
+
+
+        // 1. str.indeOf(substring,position)
+        // let str = 'Content  with  tent';
+        // console.log(str.indexOf('Content')); // 0
+        // console.log(str.indexOf('content')); // -1 // Not a Substring of 'str'
+        // console.log(str.indexOf('tent')); // 3
+        // console.log(str.indexOf('tent',4)); // 15 //  including the space tent starts with index of 15 position .
+
+
+        // Finding the number of occurances of the sub-string in a given string
+        // let str = 'As sly as a fox, as strong as an ox';
+        // console.log(str.indexOf('as')) // 7 including space
+
+        // let str = 'As sly as a fox, as strong as an ox';
+        // let target = 'as';
+        // let pos = 0;
+        // while(true){
+        //     let foundPos = str.indexOf(target,pos);  // Iteration:1 - pos:0, foundPos : 7
+        //                                              // Iteration:2 - pos:8, foundPos : 17
+        //                                              // Iteration:3 - pos:18, foundPos : 27
+        //                                              // Iteration:4 - pos:28, foundPos : -1
+                                                       
+        //     if (foundPos == -1) break;
+
+        //     console.log(`found at ${foundPos}`); // 7 // 17 // 27
+        //     pos = foundPos + 1; // 7 + 1 = 8 // 17 + 1 = 18 // 27 + 1 = 28
+        // }
+
+            //    str ========= variableName
+            
+        // str.includes(), str.startsWith(), str.endsWith()
+        // // Boolean - true / false
+
+        // // str.incudes(substring,pos)
+        // let str = 'Widget with id';
+        // console.log(str.includes('get')); // true
+        // console.log(str.includes('get',4)); // false
+
+        // // str.startsWith(substring,pos);
+        // console.log(str.startsWith('Wid')); //true
+        // console.log(str.startsWith('get')); //false
+
+        // // str.endsWith(substring,pos);
+        // console.log(str.endsWith('id')); // true
+        // console.log(str.endsWith('Wid')); // false
+
+        // Getting a substring
+        // 'String' => 'Str' or 'ing' or 'ring'
+        // Three methods
+        // 1. str.slice(start,end)
+        // 2. str.substring(start,end)
+        // 3. str.substr(start,length)
+
+        // 1. str.slice(start,end) - return the part of string from 'start' to 'end' (not included)
+        // let str = 'Stringify';
+        // console.log(str.slice(0,5)); // Strin
+        // console.log(str.slice(0,1)); // S
+        // console.log(str.slice(2)); // ringify
+
+        
+        // 2. str.substring(start,end)
+        // let str = 'Stringify';
+        // console.log(str.substring(2,6)); // 2-r 3-i 4-n 5-g
+        // console.log(str.substring(6,2)); // ring
+        // console.log(str.substring(2)); // ringify
+
+        // console.log(str.slice(2,6)); // ring
+        // console.log(str.slice(6,2)); // '  '
+
+         // 3. str.substr(start,length)
+         let str = 'Stringify';
+        console.log(str.substr(2,4)); // ring
+        console.log(str.substr(0,6)); // ring
+        console.log(str.substr(2)); // ringify
+        console.log(str.substr(-4,2)); // gi //  -4 starts with the -1=y -2=f -3=i -4=g
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

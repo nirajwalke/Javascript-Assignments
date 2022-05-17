@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM manipulation - getElementByTagName()">
+    <title>DOM manipulation - getElementByTagName()</title>
+</head>
+<body>
+    <h1>getElementByTagName</h1>
+    <h2>first Heading</h2>
+    <p>this is the first paragraph</p>
+    <h2>second Heading</h2>
+    <p>this is the second paragraph</p>
+    <h2>third Heading</h2>
+    <p>this is the third paragraph</p>
+
+    <button id="btnCount">Count H2 tags</button>
+
+    <script>
+        let btn = document.getElementById('btnCount');
+        btn.addEventListener('click', () => {
+            let headings = document.getElementsByTagName('h2');
+            console.log(headings);
+            alert(`the number of <h2> tags: ${headings.length}`);
+        }) 
+    </script>
+
+</body>
+</html>

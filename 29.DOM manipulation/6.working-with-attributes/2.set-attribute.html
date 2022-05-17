@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - setAttribute()">
+    <title>DOM - setAttribute()</title>
+</head>
+<body>
+    <button id="btnSend">Send</button>
+
+    <script>
+        // setAttribute()
+        // Syntax:
+        // element.setAttribute(name, value)
+        let btnSend = document.querySelector('#btnSend');
+        if(btnSend){
+            btnSend.setAttribute('name','send');
+            btnSend.setAttribute('disable','')
+        }
+    </script>
+</body>
+</html>

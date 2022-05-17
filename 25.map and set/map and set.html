@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Map and Set">
+    <title>Javascript - Map and Set</title>
+</head>
+<body>
+    <script>
+        // Map and Set
+        // Objects - used for storing the keyed collections
+        // Arrays - used for storing ordered collections
+
+
+        // Map
+        // map - similar to objects. map allows keys of any type
+
+        // Object - key - value - pair
+        // key - Always in the form of string
+        // value - can be of any type Ex. String, Number, Boolean, object, Array, Null, Undefined 
+        // {
+        //     name:'Skillsafari',
+        //     age:30,
+        //     isAdmin:true,
+        // }
+
+        // Map
+        // key - can be of any type
+        // value - can be of any type Ex. String, Number, Boolean, object, Array, Null, Undefined 
+        // {
+        //     1:'Skillsafari',
+        //     2:30,
+        //     isAdmin:true,
+        // }
+
+        // Methods and Properties
+        // new Map() - creating the map.
+        // map.set(key, value) - stores the value by the key in map
+
+        // chaining
+        // map.set("1",'John').set(1,123).set(true,false)
+
+        // map.get(key) - return the value by the key. returns 'undefined' if the key doesn't exist
+        // map.has(key) - returns true, if the key exists, else return false.
+        // map.delete(key) - removes the value by the key
+        // map.clear() - removes everything from the map
+        // map.size() - returns current map count
+
+        // create a map
+        // let map = new Map();
+        // console.log(map);
+        // // Adding the properties
+        // map.set("1",'John');
+        // map.set(1,123);
+        // map.set(true,false);
+        // console.log(map); // Map(3) {'1' => 'John', 1 => 123, true => false
+        // // Access value by the key
+        // console.log(map.get("1")); // John
+        // console.log(map.get(1));  // 123
+        // console.log(map.has("jack")); //false
+        // console.log(map.size); // 3
+
+        // object as keys
+        // let john = { name: 'John'};
+        // let map = new Map();
+        // map.set(john,123);
+        // console.log(map);
+        // console.log(map.get(john));
+
+        // Iteration over map
+        // 3 methods - loop over the elements
+        // map.keys() - returns an iterable for keys
+        // map.values() - returns for iterable for values
+        // map.entries() - returns an iterable for entries [ key, value ], its used by default in for .. of 
+
+       
+
+        // let recipeMap = new Map()
+        // // [[Entries]] => [ [Entry-1], [Entry-2], [Entry-3] ...., [Entry-n]] => Entry => [key, value]
+        // recipeMap.set( 'cucumbers',500)
+        //          .set('tomatoes',350)
+        //          .set('onions',50);
+        //          console.log(recipeMap); // {'cucumbers' => 500, 'tomatoes' => 350, 'onions' => 50}
+
+        // let recipeMap = new Map([
+        //     ['cucumbers',500],
+        //     ['tomatoes',350],
+        //     ['onions',50],
+        // ]);
+        // console.log(recipeMap); // {'cucumbers' => 500, 'tomatoes' => 350, 'onions' => 50}
+
+        // iterate over keys (vegetables)
+        // for ( let vegetables of recipeMap.keys() ) {
+        //     console.log(vegetables); // cucumbers
+        //                              // tomatoes
+        //                              // onions 
+        // }
+        // iterate over values (amount)
+        // for ( let amount of recipeMap.values() ){
+        //     console.log(amount); // 500
+        //                          // 350
+        //                          // 50
+        // } 
+        // iterate over [key, value] Entries
+        // for ( let [key, value] of recipeMap.entries() ){
+        //     console.log(key, value);  // ['cucumbers', 500]
+        //                          // ['tomatoes', 350]
+        //                          // ['onions', 50]
+        // }
+        // recipeMap.forEach((value, key, map) => {
+        //     console.log(`${key}: ${value}`);   // ['cucumbers', 500]
+        //                                        // ['tomatoes', 350]
+        //                                        // ['onions', 50]
+        // });
+
+        
+
+        // Object.entries(): map from object
+        // map
+        // array of [key, value] pair
+        // let map = new Map([
+        //     ['1','John'],
+        //     [1,'Jack'],
+        //     [true,false],
+        // ]);
+        // console.log(map.get(1)); // Jack
+
+        // object
+        // let user = {
+        //     name: 'John',
+        //     age: 20,
+        //     isAdmin: false,
+        // };
+        // console.log(user); // {name: 'John', age: 20, isAdmin: false}
+        // let map = new Map(Object.entries(user));
+        // console.log(map); // {'name' => 'John', 'age' => 20, 'isAdmin' => false}
+
+        // Object.fromEntries() : Object from Map
+        // let map = new Map([
+        //     ['banana',1],
+        //     ['orage', 2],
+        //     ['meat',4],
+        // ]);
+        // console.log(map); // {'banana' => 1, 'orage' => 2, 'meat' => 4}
+        // let fruits = Object.fromEntries(map);
+        // console.log(fruits); // {banana: 1, orage: 2, meat: 4}
+
+
+        // Set
+        // A set is a special type of collection - 'set of values' (without keys), each value may occur only once.
+
+        // methods
+        // new Set(iterable) - creating a set
+        // set.add(value) - adds a value and return the set
+        // set.delete(value) - removes the value, return true if the value exists,else return false
+        // set.has(value) - return true if value exists,else return false
+        // set.clear() - removes everything from the set
+        // set.size - says the elements count.
+
+        // Declaring set
+        let set = new Set();
+        // Declaring set values
+        let john = { name:'John' };
+        let jack = { name:'Jack' };
+        let mary = { name:'Mary' };
+        let edukeys = { name:'Edukeys'};
+        // Add the set values
+        set.add(john);
+        set.add(jack);
+        set.add(mary);
+        set.add(edukeys);
+        set.add(john);
+        set.add(jack);
+        set.add(mary);
+        console.log(set);  //  0:
+                           // value: {name: 'John'}
+                           // 1:
+                           // value: {name: 'Jack'}
+                           // 2:
+                           // value: {name: 'Mary'}
+                           //3:
+                           // value: {name: 'Edukeys'}
+        console.log(set.size); // 4
+
+
+        // Iteration over set
+        // set.keys()
+        // set.values()
+        // set.entries()
+        
+        for ( let user of set ) {
+            console.log(user);
+        }
+        // set.forEach((value, valueAgain, set) => {
+            // set values
+        // });
+        set.forEach((user, userAgain, set) => {
+           console.log(user);
+        //    console.log(userAgain);
+        //   console.log(set);
+           });
+        
+
+
+
+          
+
+
+
+
+    </script>
+</body>
+</html>

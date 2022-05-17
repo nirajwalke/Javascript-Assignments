@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - WEB API (web - Application programme interface)">
+    <title>Javascript - WEB API (web - Application programme interface)</title>
+</head>
+<body>
+    <script>
+        // Javascript Web API
+        //1. Client Storage(imp) - Cookies, loacalstorage, sessionStorage, indexedDB
+        //2. FormData-API - formData(imp)
+        //3. Network Requests - Fetch API(imp)
+        //4. Drag-and-Drop API - Drag and Drop API, FileReaderAPI
+        //5. Geolocation API
+        //6. History API - pushState()
+        //7. Notifiaction API
+
+
+        //  Cient Storage
+        // 1. Cookies
+        // 2. localStorage
+        // 3. sessionStorage
+        // 4. IndexedDB
+
+        // Cookies
+        // HTTP cookie is a piece of data that a server send to a web browser.
+        // the web browser stores the http cookie on the user's computer and sends it back to the same server in the later requests.
+        
+
+        // Setting the cookie
+        // content-type: text/html or application/json or application/xml
+        // set-cookie: username=admin
+
+        // Getting the cookie
+        // Cookie: username=admin
+
+        // Why cookie
+        // HTTP is Stateless
+        // When you send two subsequent HTTP requests   to the server, there is no link between them,because your HTTP is stateless
+        // the server cannot know if the two requests are from same web browser
+
+        // with the use of cookies
+        // session management; cookies allow you to manage informations that the server should remember. Ex. logins, credit/debit card details, shopping carts, etc.... 
+        // personalization: cookies allows you to store your preferences, themes, setting specific to a user
+        // tracking: cookies help record and analyze user behaviour in advertising
+
+        // Cookie details
+        // Name, value, domain, path, expiration, secure flag
+        // Name => cookie Name
+        // value => cookie value
+        // Domain => Web Application base url
+        // path => path of the domain
+        // Expirarition => wdy, DD-MM-YYYY HH:MM:SS GMT
+        // Secure flag => secure, unsecure
+        // Set-Cookie: username=john; domain=web.skillsafari.in; path=/newApp/batches;
+        // expire=Mon, 07-january-2050 12:01:00 GMT secure:
+         
+
+
+        //  Get a Cookie
+        // document.cookie
+        // Cookies as a string seperated by ';'
+        // cookieName1=value1; cookieName2=value2; .... cookieNameN=valueN
+
+        // Set a Cookie
+        // let cookieText = cookieName=value; domain=domainNmae; path=pathName; expires=expirationTime; secure
+        // document.cookie = coolieText;
+        // document.cookie = 'cookieName=value';
+        // document.cookie = 'userName=admin';
+        // encodeURIComponent(cookieName) = encodeURIComponent(value);
+        // decodeURIComponent(cookieName) = decodeURIComponent(encodedvalue);
+        // document.cookie = `${encodeURIComponent(cookieName)}=${encodeURIComponent(value)}`
+
+        // Remove a cookie
+        // Removed/destroyed automatically when the browser is closed, if the expiration time is not set.
+        // set the cookie once again with the same name, path, domain and secure option. set expiration time date to past date
+        // username; domain=web.skillsafari.in; path=/newApp/batches;
+        // expire=Mon, 07-january-2021 12:01:00 GMT secure:
+
+        // set a cookie
+        // cookieName=cookieValue; domain; path; expirationTime; secure
+        // function setCookie( cookieName, value, expirationTime, domain, path,  secure ){
+        //   let cookieText = `${ encodeURIComponent(cookieName) }=${ encodeURIComponent(value) }`;
+        //   if (expirationTime instanceof Date) {
+        //       cookieText += `; expires=${expirationTime.toGMTString()}`;
+        //   }
+        //   if(path) cookieText += `; path= ${path}`; 
+        //   if(domain) cookieText += `; domain= ${domain}`; 
+        //   if(secure) cookieText += `; ${secure}`;
+        //   document.cookie = cookieText; 
+        // }
+        // setCookie( 'username', 'admin' );
+
+        // Get Cookie
+        // name=skillsafari
+    //    function getCookie(name){
+    //        const cookieName = `${encodeURIComponent(name)}=`; // name=
+    //        const cookie = document.cookie // 'username=admin; Name=skillsafari; !%40%23%5E%23%25%24=%40%25%25%26%23*%23%5ETT%40'
+    //        let value = null;
+    //        const startIndex = cookie.indexOf(cookieName);
+    //     //    console.log(startIndex); // 4
+    //     if (startIndex > -1){
+    //         let endIndex = cookie.indexOf(';', startIndex);
+    //         // console.log(endIndex); // 4
+    //         if(cookie == -1){
+    //             endIndex = cookie.length;
+    //         }
+    //         value = decodeURIComponent(cookie.substring(startIndex + name.length, endIndex))
+    //     }
+    //    }
+    //    getCookie('name');
+
+    // Remove cookie
+    // setCookie ('username', 'admin' , new Date(0) )
+
+    // let cookie = {
+    //     firstName: 'SkillSafari',
+    //     lastName: 'Edukeys',
+    //     getAge() {
+    //      console.log(`Age: ${30}`);
+    //     },
+    // };
+    // console.log(cookie.firstName);
+    // console.log(cookie.lastName);
+    // cookie.getAge();
+
+    // Working with class
+    // class ClassName{
+        // variable declaration
+        // function declaration and definition
+    // }
+    // create an instance using 'new' keyword
+    // let instance = new ClassName()
+    // instance.varName;
+    // instance.funcName()
+
+    // class User{
+    //     firstName = 'SkillSafari';
+    //     lastName = 'Edukeys';
+    //     getAge() {
+    //         console.log(`Age: ${30}`)
+    //     }
+    // }
+    // let user = new User();
+    // console.log(user.firstName);
+    // console.log(user.lastName);
+    // user.getAge();
+
+    // Assign values to the properties at run time
+    // Constructor
+    // class User{
+    //     constructor( firstName, lastName, age ){
+    //         this.firstName = firstName;
+    //         this.lastName = lastName;
+    //         this.age = age;
+    //     }
+    //     getAge() {
+    //      console.log(`Age: ${this.age}`);
+    //     }
+    // } 
+    // let user = new User('SkillSafari', 'EduKeys', 30);
+    // console.log(user.firstName);
+    // console.log(user.lastName);
+    // user.getAge; 
+     
+
+
+    // Static - Able to access the properties of the class without creating an object/instance
+       class User{
+       static firstName = 'SkillSafari';
+       static lastName = 'Edukeys';
+       static getAge() {
+            console.log(`Age: ${30}`)
+        }
+    }
+    // let user = new User();
+    console.log(User.firstName);
+    console.log(User.lastName);
+    User.getAge();
+
+
+    class Cookie{
+        static getCookie(){
+        console.log('getCookie()')
+        }
+        static setCookie(){
+        console.log('setCookie()')
+        }
+        static removeCookie(){
+        console.log('removeCookie()') 
+        }
+    }
+    let cookie = new Cookie
+    Cookie.setCookie();
+    Cookie.getCookie();
+    Cookie.removeCookie();
+
+
+    </script>
+</body>
+</html>

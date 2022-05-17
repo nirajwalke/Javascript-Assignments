@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Array-Methods">
+    <title>Javascript - Array-Methods</title>
+</head>
+
+<body>
+    <script>
+        // Array Methods
+        // Add/Remove items
+        // pop() / push() // extracts and add the items at the end of the array
+        // shift() / unshift() // extracts and add the item at the beginning of the array
+
+
+        // Splice()
+        // Deleting the element
+        // let arr = ['I', 'Go', 'Home'];
+        // console.log(arr); //['I', 'Go', 'Home']
+        // delete arr[1];
+        // console.log(arr); // ['I', empty, 'Home']
+
+        // Splice
+        // Removing an Element
+        // Syntax:
+        // arr.splice( start, deletecount)
+        // let arr = ['I', 'Go', 'Home'];
+        // arr.splice(1,1);
+        // console.log(arr); // ['I', 'Home']
+
+        // Removing an element and adding new array elements
+        // Syntax
+        // arr.splice(start, deletecount, newEle-1, newEle-2 ..... newEle-n)
+        // let arr = [ 'I', 'Study', 'Javascript', 'Right', 'now'];
+        // console.log(arr); // ['I', 'Study', 'Javascript', 'Right', 'now']
+
+        // arr.splice(0, 3, 'lets', 'Dance');
+        // console.log(arr); //  ['lets', 'Dance', 'Right', 'now']
+
+        // Returning removed elements
+        // let arr = [ 'I', 'Study', 'Javascript', 'Right', 'now'];
+        // let removedElem = arr.splice(2,2);
+        // console.log(removedElem); //['Javascript', 'Right']
+        // console.log(arr); // ['I', 'Study', 'now']
+
+
+        // Adding Array Elements without deletion
+        // Syntax:
+        // arr.splice( startIndex, 0, newElem-1, newElem-2 .... newElem-n)
+        // let arr = [ 'I', 'Study', 'now'];
+        // arr.splice(2, 0 , 'Javascript', 'Right');
+        // console.log(arr); // ['I', 'Study', 'Javascript', 'Right', 'now']
+
+        // using negative index as a starting index
+        // let arr = [ 'I', 'Study', 'now', 'so','far'];
+        // console.log(arr);
+        // arr.splice(-2, 0 , 'Javascript', 'Right');
+        // console.log(arr); //  ['I', 'Study', 'now', 'Javascript', -3='Right', -2='so', -1='far'] 
+
+        // Slice()
+        // Syntax:
+        // arr.slice(startIndex,endIndex) - // Returns start to end minus(-) 1 index
+        // let arr = ['t', 'e', 's', 't'];
+        // console.log(arr.slice(1,3)); //  ['e', 's']
+        // console.log(arr.slice(-2)); //  ['s', 't']
+
+        // concat()
+        // Syntax:
+        // arr.concat( arr1, arr2 ..... arrn);
+        // let arr = [ 1, 2 ];
+        // let arr1 = [ 3, 4 ];
+        // let arr2 = [ 5, 6 ];
+        // console.log(arr.concat(arr1,arr2)); // [1, 2, 3, 4, 5, 6]
+        // console.log([].concat([1, 2 ], [3, 4 ], [5,6 ] ) ); // [1, 2, 3, 4, 5, 6]
+        // let newArray = [];
+        // console.log(newArray.concat(arr, arr1, arr2)); // [1, 2, 3, 4, 5, 6]
+
+        // Iterate: forEach()
+        // Syntax:
+        // arr.forEach ( function ( item, index, array ){
+        //  do something with item, index and array
+        // })
+
+        // using for...of  loop
+        // let subjects = ['English', 'Maths', 'Physics', 'Computer', 'Chemistry'];
+        // // for( let subject of subjects){
+        // // console.log(subject); //  ['English', 'Maths', 'Physics', 'Computer', 'Chemistry'];
+        // // }
+
+        // subjects.forEach(function (subject, subjectIndex, subjectArray)
+        //  { // subject, subjectIndex, subjectArray this all are variables.
+
+        //     console.log(`${subjectIndex} => ${subject} in [${subjectArray}]`);
+        // })
+
+        // Searching in Array
+        // indexOf() / lastIndexOf() / and includes()
+        // arr.indexOf( item, fromWhichIndex) - looks for 'item' starting from index 'from' and returns the index where it was found, otherwise it returns -1.
+        // arr.lastIndexOf( item, from ) - similar like arr.indexOf() but looks for right to left 
+        // arr.includes(item,from) - it gives the boolean value like looks for the 'item' starting
+        // 'from', returns 'true' if found, else return 'false'
+
+        // let arr = [ 1, 0, false, 1 ];
+        // console.log(arr.indexOf(false)); // 2
+        // console.log(arr.indexOf(3)); // -1
+
+        // console.log(arr.lastIndexOf(1)); // 3
+
+        // console.log(arr.includes(false)); // true
+
+
+        // find() and findIndex()
+        // Syntax:
+        // arr.find( function ( item, index, array ){
+              // if true is returned, item is returned and iteration is stopped
+              // for falsy scenario returns undefined   
+        // })
+
+        // let users = [
+        //     {id : 1, name : 'John'},
+        //     {id : 2, name : 'Peter'},
+        //     {id : 3, name : 'Jack'},
+        //     {id : 2, name : 'Test'},
+        // ];
+    //    let user = users.find(function(item){
+    //        return item.id == 2; // 1st. iteration 1==2 => false 2nd. iteration => 2==3 => true
+    //     });
+    //     console.log(user); // {id: 2, name: 'Peter'}
+                  
+    //         using arrow function
+        // let user = users.find(( item ) => item.id == 3);  
+        // console.log(user); // {id: 3, name: 'Jack'}
+        
+        //    using findIndex()
+        // let user = users.findIndex(( item ) => item.id == 3);  
+        // console.log(user); // 2 
+
+
+        // filter()
+        // filter() returns an array of all the matching elements
+        // Syntax:
+         // arr.filter( function ( item, index, array ){
+              // if true, item is pushed to results array and iteration continues till last array elements
+              // returns empty array if no matches found   
+        // })
+
+        // let users = [
+        //     {id : 1, name : 'John'},
+        //     {id : 2, name : 'Peter'},
+        //     {id : 3, name : 'Jack'},
+        //     {id : 2, name : 'Test'},
+        // ];
+    //    let someUser = users.filter(function (item){
+    //         return item.id == 2;
+
+    //     });
+    //     console.log(someUser); // 0: {id: 2, name: 'Peter'}
+    //                            // 1: {id: 2, name: 'Test'}
+    //                            // length: 2
+
+    //    Using Arrow Function
+        // let someUser = users.filter( (item) =>  item.id == 2);
+        // console.log(someUser);  // 0: {id: 2, name: 'Peter'}
+        //                         // 1: {id: 2, name: 'Test'}
+        //                         // length: 2
+
+
+
+    
+    // Transform an array
+    // map()
+    // Syntax:
+    // arr.map(function(item, index, array){
+    // return the new value instead of item
+    // })
+
+    // let subjects = ['English', 'Maths', 'Physics', 'chemistry', 'Computer'];
+    // let subjectsLength = subjects.map(function(item){
+    //       return item.toUpperCase();
+    // });
+    // console.log(subjectsLength); // ['ENGLISH', 'MATHS', 'PHYSICS', 'CHEMISTRY', 'COMPUTER']
+
+    // Using Arrow Function
+    // let subjects = ['English', 'Maths', 'Physics', 'chemistry', 'Computer'];
+    // let subjectsLength = subjects.map((item) => item.length);
+    // console.log(subjectsLength); // [7, 5, 7, 9, 8]
+
+    // reverse()
+
+    // let subjects = ['English', 'Maths', 'Physics', 'chemistry', 'Computer'];
+    // console.log(subjects); // ['English', 'Maths', 'Physics', 'chemistry', 'Computer']
+    // console.log(subjects.reverse()); //  ['Computer', 'chemistry', 'Physics', 'Maths', 'English']
+
+
+
+    // split() and join()
+    // split() - returns an array based on the delimeter
+    // Syntax:
+    //  arr.split(delit);
+    // let subjects = 'English-Maths-Physics-chemistry-Computer';
+    // console.log(subjects); // English-Maths-Physics-chemistry-Computer
+    // let subject = subjects.split('-');
+    // console.log(subject); // ['English', 'Maths', 'Physics', 'chemistry', 'Computer']
+    // for (let sub of subject){
+    //     console.log(sub);
+    // };
+    // subject.forEach((item) => console.log(item) );
+
+
+    // spilt into letters
+    // let str = 'Hello';
+    // console.log(str.split('')); //  ['H', 'e', 'l', 'l', 'o']
+
+
+    // join() - returns a string from the given array based on delimeter
+    let subjects = ['English', 'Maths', 'Physics', 'chemistry', 'Computer'];
+    console.log(subjects);
+    let subject = subjects.join('-');
+    console.log(subject); // English-Maths-Physics-chemistry-Computer
+
+    // reduce() / reduceRight()
+    // Syntax:
+    // arr.reduce(function(accumulator, item, index, array){
+
+    // }, [initial]);
+    // accumulator - is the result of the previous function cell, equals 'initial' the first time
+    // (if 'initial' is provided)
+    let arr = [1, 2, 3, 4, 5];
+    let result = arr.reduce(function (sum, current){ // sum:0 current:1 // sum:1 current:2 
+        return sum + current // 3
+    },0);
+    console.log(result);
+
+
+
+
+                          
+
+
+ 
+
+      
+       
+
+
+
+    </script>
+</body>
+
+</html>

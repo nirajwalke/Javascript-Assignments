@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Function-Expression">
+    <title>Javascript - Function-Expression</title>
+</head>
+<body>
+    <script>
+    //  Functtion Expression
+    // let message = 'Hello';
+    // console.log(message);
+
+    // Normal Function Declaration
+    // function showMessage(){
+    //     console.log('hello,function expression');
+    // }
+    // showMessage();
+
+    // Function Expression
+    // let showMessage  = function (){
+    //     console.log('hello,function expression...')
+    // };
+    // showMessage();
+
+    // function showMessage(){
+    //     console.log('Hello...');
+    // }
+    // let anotherFunction = showMessage;
+    // anotherFunction();
+    // showMessage();
+
+             // Call Back functions
+    // calling a function inside an another function.
+
+    // let question = 'Do u agree?';
+    // confirm(question);
+
+    // yes = showOk
+    //  no = shoowCancel
+
+    // function ask( question, yes, no) {
+    //     if ( confirm ( question ) ) { //true => ok
+    //         yes ();
+    //     }
+    //     else {  // false = cancel
+    //         no ();
+    //     }
+    // }
+
+    // function showOk () {
+    //     console.log('you agreed'); 
+    // }
+     
+    // function showCancel () {
+    //     console.log('you disagree');
+    // }
+
+    // ask ('Do You Agree', showOk, showCancel);
+
+
+    // Function Expression vs Function Declaration
+
+    // Function Declaration:
+    // function sum ( a, b ){
+    //     return a + b;
+    // }
+    // let result = sum ( 10, 20 );
+    // console.log(result);
+
+
+    // Function Expression:
+    // let sum = function (a,b){
+    //     return a + b;
+    // }
+    // let result = sum(10,20);
+    // console.log(result);
+
+    // Example:Normal Function Declaration
+    // showMessage('Hello,Function...'); // u can pass value anywhere in normal func declr tn
+    // function showMessage(message){
+    //     console.log(message);
+    // }
+
+    // Example : Function Expression
+    // showMessage ('Hello,function....'); // this is not possible in function expression
+    // it is just like 
+    // let print = 'hello';
+    // console.log(print);
+
+    // showMessage ('Hello,function....'); // this is not possible in function expression
+    // let showMessage = function (message){
+    //     console.log(message);
+    // };
+    // showMessage('hello,function..')
+
+    let age = prompt('What is your age? ',18);
+    let message;
+    if ( age < 18 ) {
+        message = function() {
+            console.log('Hello')
+        };
+    }
+    else{
+        message = function(){
+            console.log('Greetings')
+        };
+    }
+    message();
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

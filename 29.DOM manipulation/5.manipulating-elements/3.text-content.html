@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - textContent">
+    <title>DOM - textContent</title>
+</head>
+<body>
+    <div id="note">
+        Javascript textContent
+        <span style="display:none">Hidden text</span>
+        <!-- comment -->
+    </div>
+    <script>
+        // Reading textContent for a node
+        // let note = document.querySelector('#note');
+        // console.log(note.textContent); // return the cocatenation of the textContent of every child noded, excluding the comments
+        // console.log(note.innerText); // innerText takes the css style into account and return only human readable text
+    
+        // Setting text content for a node
+        let note = document.querySelector('#note');
+        note.textContent = 'This added by the textContent';
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - insertAdjacentHTML()">
+    <title>DOM - insertAdjacentHTML()</title>
+</head>
+<body>
+    <ul id="list">
+      <li>HTML</li>
+    </ul>
+    <script>
+        // insertAdjacentHTML()
+        // insertAdjacentHTML() method parses a piece of html text and inserts the resulting nodes into a dom tree at a specified position
+        // element.insertAdjacentHTML(position,text)
+
+        // position
+        // 1. beforebegin - before the element
+        // 2. afterbegin - before its first child of the element
+        // 3. beforeend - after the last child of the element
+        // 4. afterend - after the element
+
+        // text - node/element
+
+        let list = document.querySelector('#list');
+        list.insertAdjacentHTML('beforebegin', '<h2> web technology </h2>');
+        list.insertAdjacentHTML('afterbegin', '<li> CSS </li>');
+        list.insertAdjacentHTML('beforeend', '<li> JavaScript </li>');
+        list.insertAdjacentHTML('afterend', '<li> React </li>');
+
+
+    
+    </script>
+</body>
+</html>

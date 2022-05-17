@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Working with Evens - Intro">
+    <title>DOM - Working with Evens - Intro</title>
+</head>
+<body>
+    <div id="container">
+        <button id="btn">Click me!</button>
+    </div>
+    <a href="http://www.skillsafari.in" id="link" target="_blank">Go to www.skillsafari.in</a>
+    <script>
+        // Events in Javascript
+        // Event is an action that occurs in the web browser, when the web browser feedbacks to us in which we can respod to it
+        // Each event may have an event handler. it is a block of code that will execute when the event occurs
+        // Event handler is also known as the event listener. listens to the event and executes when the event occurs.
+
+        // element.addEventListener('eventType','eventFunction') // registering an event and execute an event
+        // let btn = document.querySelector('#btn');
+        // register an event
+      
+        // function message() {
+        //     alert('Clicked....');
+        // }
+        // btn.addEventListener('click',message);
+
+        // Anonymous Function as eventFunction
+        // btn.addEventListener('click', function(){
+        //     alert('Clicked...')
+        // });
+
+        // Arrow function as eventFunction
+        // btn.addEventListener('click', () => {
+        //     alert('Cliecked - Arrow Function')
+        // });
+
+        // Event flow
+        // Event models:
+        // Event bubbling
+        // Evet capturing
+
+        // Event bubbing : an event starts with the most specific element and then flows upward towrds the least specific element (document or window object)
+        // when the user click the 'button', the 'click' event occurs in the following order
+        // 1. button
+        // 2. div with the id container
+        // 3. body
+        // 4. html
+        // 5. document
+
+        // Event capturing : an event starts with the least specific element and then flows downward towrds the most specific element 
+        // when the user click the 'button', the 'click' event occurs in the following order
+        // 1. document
+        // 2. html
+        // 3. body
+        // 4.div with the id container
+        // 5. button
+
+        // Dom level 2 event flow
+        // three phases
+        // first, event capturing occurs, which proviedes the opportunity to inspect the event
+        // second, the actual target recieves the event
+        // third, event bubbling occurs, which allows a final response to the event 
+        
+        // Event object
+        let btn = document.querySelector('#btn');
+        btn.addEventListener('Click', (event) => {
+            console.log(event); 
+            console.log(event.type);
+        });
+
+        // properties of event : preventDefault(), target, type
+        let link = document.querySelector('#link');
+        link.addEventListener('click', (e) => {
+            console.log('clicked');
+            console.log(e);
+            e.preventDefault();
+        })
+
+    </script>
+</body>
+</html>

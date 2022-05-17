@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Numbers">
+    <title>Javascript - Numbers</title>
+</head>
+<body>
+    <script>
+        // Numbers
+        // Number is one of the primitive datatypes in javascript.
+        // 1000000000 - one followed bt 9 zeros. - 1 billion
+        // let billion = 1000000000;
+        // // '_' seperator
+        // let billion = 1_000_000_000;
+
+        // let billion = 1e9;
+        // console.log(billion); 
+
+        // console.log(7.3e9); //7.3 billion //7300000000 //7_300_000_000 //7.3 * 1000000000
+         
+        // 1e3 = 1 * 1000;
+        // 1.23e6 = 1.23 * 1000000;
+
+        // Miliseconds
+        // let ms = 0.000001;
+        // let ms = 1e-6;
+        // console.log(ms); // 1/1000000   //0.000001 
+
+        //  1e-3 = 1 / 1000;
+        //  1.23e-6 = 1.23 / 1000000;
+
+
+        // Rounding a number
+        // Math
+        // 1. Math.floor - Round Down the Number
+        // Ex. 3.1 => Math.floor(3.1) => 3
+        // Ex. -1.1 => Math.floor(-1.1) => -2
+        console.log(Math.floor(6.5)); // 6
+
+        // 2. Math.ceil - Rounds up the Number
+        // Ex. 3.1 => Math.ceil(3.1) => 4
+        // Ex.-1.1 => Math.ceil(-1.1) => -1
+        console.log(Math.ceil(8.2)); // 9
+
+        // 3. Math.round - Round the number to the nearest Integer
+        // Ex. 3.1 => Math.round(3.1) => 3
+        // Ex. 3.5 => Math.round(3.5) => 3
+        // Ex. 3.6 => Math.round(3.6) => 4
+        console.log(Math.round(5.9)); // 6
+
+        // 4. Math.trunc - Removes anything after the decimal point without rounding
+        // Ex. 3.1 => Math.trunc(3.1) => 3
+        // Ex. -1.1 => Math.trunc(-1.1) => -1 
+        console.log(Math.trunc(1.89)); // 1
+
+
+        // Ex. 1.2345 => 1.23
+        //1.  Multiply and Divide Method
+        let num = 1.2345;
+        console.log(Math.round(num * 100)/ 100); // 1.2345 * 100 = 123.45 => round => 123, 123/100 => 1.23
+        console.log(num.toFixed(2)); // 1.23 // this is in string
+
+
+        // 2. toFixed(n) => rounds the number to 'n' digit after the point
+        // Its gives the return value into string format
+        let num1 = 12.342356;
+        console.log(num1.toFixed(1)); // 12.3 // this is in string we have to convert this into number format + operator.
+
+        // Ex.3
+        console.log( 0.1 + 0.2); // 0.30000000000000004 this is 16 bit representation
+        console.log( 0.1 + 0.2 == 0.3 ); // false
+
+        let sum = 0.1 + 0.2;
+        console.log(+sum.toFixed(1) === 0.3); // true
+
+        console.log(9999999999999999); // 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 - // 16 - 9s gives u // 1 followed 16 zeros
+
+        // Tests : isFinite and isNan
+        // +infinity and -infinity => special numeical value that is greater or less than to anything.
+        // Nan represents an error
+        // isNan(value)
+        console.log(isNaN(NaN)); // true
+        console.log(isNaN('Hello')); // true
+        console.log(isNaN(12)); // False
+        console.log(NaN === NaN); // false => 'abc' === 'xyz'
+
+
+        // isFinite(value) - converts the value into a number and return 'true', if it is a normal number else return false.
+        console.log(isFinite('10')); // true
+        console.log(isFinite('Hello')); // false
+        console.log(isFinite(Infinity)); // false
+
+        // parseInt and parseFloat
+        console.log(+'100px'); //Nan
+        console.log(parseInt('100px')); // 100
+        console.log(parseFloat('12.5rem')); // 12.5
+
+        console.log(parseInt('px100')); // Nan
+        console.log(parseFloat('rem12.5')); // Nan
+
+        console.log(parseInt('12.3')); // 12
+        console.log(parseFloat('12')); // 12
+        console.log(parseFloat('12.3.4')); // 12.3
+
+        // Math.random()
+        console.log(Math.random());
+
+        // Math.min() 
+        console.log(Math.min( -1, -2, 0, 1, 2)); // -2
+
+        //  Math.max()
+        console.log(Math.max( -1, -2, 0, 1, 2)); // 2
+
+        // Math.pow(n, power)
+        console.log(Math.pow(2, 10)); // 1024
+
+        console.log(Math.floor((Math.random() * 10) + 1));
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - replaceChild()">
+    <title>DOM - replaceChild()</title>
+</head>
+<body>
+    <ul id="subjects">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="replace">Bootstrap</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        // replaceChild()
+        // parentNode.replaceChild(newChild, oldChild)
+
+        let subjects =  document.querySelector('#subjects');
+        let replace = document.querySelector('#replace');
+        let li = document.createElement('li');
+        li.textContent = 'React';
+        subjects.replaceChild(li, subjects.replace);
+
+    </script>
+</body>
+</html>

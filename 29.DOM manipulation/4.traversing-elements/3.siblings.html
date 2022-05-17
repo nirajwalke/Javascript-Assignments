@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM manipulation - Getting Siblings">
+    <title>DOM manipulation - Getting Siblingsument</title>
+</head>
+<body>
+    <ul id="subjects">
+        <li>English</li>
+        <li>Maths</li>
+        <li>Physics</li>
+        <li class="current">Chemistry</li>
+        <li>Computer</li>
+        <li>Commerce</li>
+        <li>History</li>
+        <script>
+            // Get the next sibling
+            let subjects = document.querySelectorAll('#subjects');
+            console.log(subjects);
+            // let current = document.querySelector('.current');
+            // let nextSibling = current.nextElementSibling;
+            // console.log(nextSibling);
+
+            // next siblings of all the element
+            // let current = document.querySelector('.current');
+            // let nextSibling = current.nextElementSibling;
+            // while(nextSibling){
+            // console.log(nextSibling);
+            // nextSibling = nextSibling.nextElementSibling;
+            // };
+
+            // Get the previous siblings
+            //  let current = document.querySelector('.current');
+            // let previousSibling = current.previousElementSibling;
+            // console.log(previousSibling);
+
+            // previous element of the siblings
+            let current = document.querySelector('.current');
+            let prevSibling = current.previousElementSibling;
+            while(prevSibling){
+            console.log(prevSibling);
+            prevSibling = prevSibling.previousElementSibling;
+            };
+
+        </script>
+</body>
+</html>

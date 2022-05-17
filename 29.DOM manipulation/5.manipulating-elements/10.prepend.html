@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="DOM - Prepend()">
+    <title>DOM - Prepend()</title>
+</head>
+<body>
+    <ul id="tech">
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        // prepend()
+        // parentNode.prepend(...nodes)
+        // parentNode.prepend(...DOMstring)
+
+        // prepend() the elements
+        // let tech = document.querySelector('#tech');
+        // let langs = [  'C', 'C++', 'Java', 'TypeScript'  ];
+        // let nodes = langs.map((lang) => {
+        //     let li = document.createElement('li');
+        //     li.textContent = lang;
+        //     return li;
+        // });
+        // tech.prepend(...nodes);
+
+        // prepend the text to the element
+        let tech = document.querySelector('#tech');
+        tech.prepend('prepend() Text...');
+        console.log(tech.textContent);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Javascript - Arrow-Function" >
+    <title>Javascript - Arrow-Function</title>
+</head>
+<body>
+    <script>
+
+
+          //    Declaring the Function
+        // function showMessage(){ // function with function name
+        //     console.log('Welcome to Function');
+        //     for ( i = 1; i <= 5; i++ ){
+        //         console.log(i);
+        //     }
+        // }
+        //  //   Calling the Function
+        // showMessage();
+        // showMessage();
+        // showMessage();
+        // showMessage();
+
+
+              // Function Expression
+        // let func = function ( parameter1, parameter2...) {
+        //     return expression;
+        // }; 
+
+
+          // example:
+       // Anonymous Function : // Function without the function name
+        // let sum = function ( a, b) {
+        //     return a + b; // return is used to give the values which are associated with the return to the function calling area.
+                            // return keyword is always used at the end in the function body.
+                            // In a function body we are allowed to write only 1 return.
+        // }
+        // let result = sum ( 10, 20 ); // console.log(sum(10,20));
+        // console.log(result); //30
+
+
+
+        // Arrow Function
+        // There is no need to use keyword 'function'.
+        // Introduce '=>' Arrow symbol between the parameter area and function body.
+        // Inside the function body, if there is a single statement we can omits the '{' and '}' symbols.
+        // We can also omit the 'return' keyword, if there is a single statement inside the function body.
+
+        // Arrow Function
+        // let sum =  ( a, b ) => a + b;
+        // let result = sum(10,20); // we can consize this line as : console.log(sum(10,20));
+        // console.log(result);
+
+
+
+        // Arrow function with only single arguement
+        // let double = num => num * num ; // no need to give '(' and ')' for the paraemter.
+        // console.log(double(5));
+
+
+
+        // For multiple Arguement:
+        // let multiply = (num1,num2,num3) => num1 * num2 * num3 ; // for multiple parameters we have use '(' and ')'
+        // console.log(multiply(1,2,3));
+
+
+        // No parameter Arrow Function:
+        // const message = () => 'This is a sample text';
+        // console.log(message());
+
+
+        // // conditional / ternary operator
+        // let age = prompt('What is your age?');
+        // // let result = (condition) ? 'true statement' : 'False statement'
+        // let message = (age < 18) ?
+        //     function () { console.log ('Hello....') } :
+        //     function () { console.log ('Greetings'); };
+        //     message();
+
+
+
+        // we have to convert the above program using arrow function 
+        // let age = prompt('What is your age?');
+        // // let result = (condition) ? 'true statement' : 'False statement'
+        // let message = (age < 18) ?
+        //      () => { console.log ('Hello....') } : //single statement
+        //      () => { console.log ('Greetings'); }; //single statement
+        //     message(); 
+
+
+
+        //     let age = prompt('What is your age?');
+        // // let result = (condition) ? 'true statement' : 'False statement'
+        // let message = (age < 18) ?
+        //      () => { console.log ('Hello....'); console.log('True Statement.') } : //multiple statement
+        //      () => { console.log ('Greetings'); console.log('False Statement') }; //multiple statement
+        //     message(); // Calling the function
+        
+        //  Multiline Arrow Function
+        // let sum = ( a , b) => {
+        //     let result = a + b;
+        //     return result;
+        // };
+        // console.log(sum(10,20)); 
+
+
+
+                 // Call Back functions
+    // calling a function inside an another function.
+
+   // // let question = 'Do u agree?';
+   // // confirm(question); 
+
+    // yes = showOk
+    //  no = shoowCancel
+          
+          // program
+
+
+    // function ask( question, yes, no) {
+    //     if ( confirm ( question ) ) { //true => ok
+    //         yes ();
+    //     }
+    //     else {  // false = cancel
+    //         no ();
+    //     }
+    // }
+
+    // function showOk () {
+    //     console.log('you agreed'); 
+    // }
+     
+    // function showCancel () {
+    //     console.log('you disagree');
+    // }
+
+    // ask ('Do You Agree', showOk, showCancel);
+    
+    
+
+
+    // convert the above program usig arrow function
+
+
+    // function ask( question, yes, no) {
+    //     if ( confirm ( question ) ) { //true => ok
+    //         yes ();
+    //     }
+    //     else {  // false = cancel
+    //         no ();
+    //     }
+    // }
+
+    // const showOk = () => console.log('you agreed'); 
+     
+    // const showCancel = () => console.log('you disagree');
+    
+    // ask ('Do You Agree', showOk, showCancel);  // calling thee function
+
+
+
+   // convert the above program usig arrow function
+   //  Again u can write this program as:   
+
+
+    // const ask = ( question, yes, no) => { 
+    //                   // const question = 'Do u agree?';
+    //                 // const yes = () => console.log('you agreed'); 
+    //                  // const no = () => console.log('you disagree');
+    //     if ( confirm ( question ) ) { //true => ok
+    //         yes ();
+    //     }
+    //     else {  // false = cancel
+    //         no ();
+    //     }
+    // }
+    //   // calling thee function
+    // ask ('Do You Agree',           // question                  
+    //    () => console.log('you agreed') , // showOk
+    //    () => console.log('you disagree'));  // showCancel
+
+
+
+
+    //    Above program using ternary operator with Arrow function
+    const ask = ( question, yes, no) => { confirm ( question ) ?   yes () : no (); }
+    ask ('Do You Agree',                              // calling thee function
+       () => console.log('you agreed') , 
+       () => console.log('you disagree')); 
+
+
+    </script>
+    
+</body>
+</html>

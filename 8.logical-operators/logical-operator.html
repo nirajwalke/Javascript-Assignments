@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Desription" content="Javascript - Logical Operator">
+    <title>Javascript - Logical Operator</title>
+</head>
+<body>
+    <script>
+        // logical operators
+        // Or - ||
+        // And - &&
+        // Not - !
+        // Nullish coalescing - ??
+        // The resut of logical operator can be of any type, not only boolean.
+
+        // OR - ||
+        // Result - a || b
+        // There are 4 possible logical OR combinations:
+        // Operand 1         Operand 2      Result:
+        // true               true           true
+        // true               false          true
+        // false              true           true
+        // false              false          false
+
+        // or operator- aways searches for true value
+        // let hour = 9;
+        // if (hour < 10 || hour > 18){  // 9 < 10 || 9 > 18 => true || false
+        //     console.log('office is closed'); //true
+        // } else {
+        //     console.log('welcome to office');
+        // }
+        
+        // Ex.2
+        // let hour = 12;
+        // let isWeekened = true;
+        // if ( hour < 10 || hour > 18 || isWeekened ){ // 12 < 10 = false || 12 > 18 = false ||isWeekened = true
+        //     console.log('office is closed');
+        // } else {
+        //     console.log('Welcome to office');
+        // }
+
+        // OR '||' Finds the first Truthy value
+        // 1. OR operator evaluates operand from left to right
+        // 2. for each operand, converts it to boolean. if the result is 'true', stops and returns the original value of that operand.
+        // 3. If all the operands have been evaluates as 'false', it will returns the last operand value.
+        // 4. A chain of 'OR' returns the first truthy value or the last one if no truthy value is found.
+        
+        // ex.
+        // console.log( 1 || 0); // 1 truthy
+        // console.log( null || 1); // 1 truthy
+        // console.log( null || 0 || 1); // 1 truthy
+        // console.log( undefined || null || 0); // 0 last no true value (falsy value)
+
+        // ex.
+        // let firstName = 'Skillsafari'; // 1 or true
+        // let lastName = 'Edukeys';  // 1 or true
+        // let nickName = 'Fullstack';  // 1 or true
+        // console.log( firstName || lastName || nickName || 'Anonymous'); // 'Skillsafari' because 1st value is true it will skip to check the other values. 
+
+        // Short - Circuit Evaluation
+        // true || console.log( 'will i get printed1');
+        // false || console.log('will i get printed2');
+
+        // && (AND / logical AND)
+        // result = a && b;
+        // There are 4 possible logical AND combinations:
+        // Operand 1         Operand 2      Result:
+        // true               true           true
+        // true               false          false
+        // false              true           False
+        // false              false          false
+
+        // let hour = 12;
+        // let minute = 30;
+        // if( hour == 12 && minute == 30){ // true && true => true
+        //     console.log('time is 12:30'); // true - this is ans
+        // } else {
+        //     console.log('unusual timing');
+        // }
+        
+
+        // let hour = 10;
+        // let minute = 30;
+        // if( hour == 12 && minute == 30){ // false && true
+        //     console.log('time is 12:30'); 
+        // } else {
+        //     console.log('unusual timing'); // false - this get printed
+        // }
+
+        //   if ( 1 && 1 ) {
+        //       console.log('will i display');
+        //   } else {
+        //       console.log('i am from else');
+        //   }
+        // AND '&&' find for the first  falsy value
+        // 1. AND operator evaluates operand from left to right
+        // 2. for each operand, converts it to boolean. if the result is 'False', stops and returns the original value of that operand.
+        // 3. If all the operands have been evaluates as 'true', it will returns the last operand value.
+        // 4. A chain of 'AND' returns the first falsy value or the last one if no falsy value is found.  
+        
+          // ex.
+        // console.log( 1 && 0); // 0-false 
+        // console.log( null && 1); // null - equivalent to false
+        // console.log( null && 0 && 1); // null - equivalent to false
+        // console.log( undefined && null && 0); // undefined - equivalent to false (falsy value)
+         
+        // console.log( 1 && 2 && null && 3); // null
+        // console.log( 1 && 2 && 5); // last operand 5
+
+
+        // let firstName = ''; //  0 or false
+        // let lastName = '';  // 0 or false
+        // let nickName = '';  // 0 or false
+        // console.log( firstName && lastName && nickName && 'Anonymous'); // '' because 1st value is false it will skip to check the other values. 
+ 
+
+        // !(NOT)
+        // true or false
+        // result - !value
+        // converts the operand to boolean type. returns  the inverse value.
+
+        console.log( !true ); // false
+        console.log( !0 ); // true
+  
+        // precedence - ! - && - ||   
+        // NOT has the highest precedence order followed by AND then OR.
+
+
+
+
+
+
+        let a = prompt("enter any no." )
+if (a % 2 === 0) {
+  console.log("even");
+} else {
+  console.log("odd");
+}
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+    </script>
+</body>
+</html>
